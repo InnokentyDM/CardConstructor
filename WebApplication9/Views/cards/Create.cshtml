@@ -1,0 +1,91 @@
+﻿@model WebApplication9.Models.addCards.addCardModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/Canvas.css")
+@Scripts.Render("~/scripts/jquery-1.10.2.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@Scripts.Render("~/js/UploadSVG.js")
+@Scripts.Render("~/bundles/fabricjs")
+
+@using MvcCheckBoxList.Model
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>cards</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.layout_id, "layout_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.layout_id, (SelectList)ViewBag.layout_id, String.Empty)
+                @Html.ValidationMessageFor(model => model.layout_id)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cards.text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cards.text)
+                @Html.ValidationMessageFor(model => model.cards.text)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cards.image, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <label>Image File:</label><br />
+                <input type="file" id="imageLoader" name="imageLoader" />
+                <div with="500" height="500">
+                    <canvas id="canvas" width="500" height="500"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="b-checkboxlist">
+
+           
+            
+                <br />
+                @Html.CheckBoxListFor(model => model.postedItems.IDs,
+                                      model => model.availItems,
+                                      i => i.Name,
+                                      i => i.Name,
+                                      model => model.selectedItems,
+                                      Position.Vertical)
+
+                <p>
+                    <input type="submit" value="Применить" />
+                </p>
+          
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cards.published, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cards.published)
+                @Html.ValidationMessageFor(model => model.cards.published)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

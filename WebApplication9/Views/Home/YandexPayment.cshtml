@@ -1,0 +1,92 @@
+﻿@model WebApplication9.Models.application
+
+@{
+    ViewBag.Title = "YandexPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Подтверждение заявки</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+        <div>
+            <hr />
+            @Html.HiddenFor(model => model.finishDate)
+            @Html.HiddenFor(model => model.Delivery_id)
+            @Html.HiddenFor(model => model.count_id)
+            @Html.HiddenFor(model => model.insertionDate)
+            @Html.HiddenFor(model => model.vc_id)
+           
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.insertionDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.insertionDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.summ)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.summ)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.COUNT.COUNT_VALUE)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.COUNT.COUNT_VALUE)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.cards.text)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cards.text)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.cards.IMAGES.Image)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cards.IMAGES.Image)
+                </dd>
+
+                <dt>
+                    @Html.DisplayFor(model => model.cards.IMAGES.Image_2)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cards.IMAGES.Image_2)
+                </dd>
+
+                <dt>
+                    @Html.DisplayFor(model => model.cards.ITEM_TYPE.NAME)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cards.ITEM_TYPE.NAME)
+                </dd>
+
+                <dt>
+                    @Html.DisplayFor(model => model.cards.layout.name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cards.layout.name)
+                </dd>
+            </dl>
+            <button type="submit" class="btn btn-default">Заказать</button>
+            </div>
+        </div>
+}

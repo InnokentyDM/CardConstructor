@@ -1,0 +1,11 @@
+DEBUG 2015-12-24 21:53:44,746 33581ms HomeController         Apply              - PLINQ
+DEBUG 2015-12-24 21:53:49,020 37856ms HomeController         Apply              - PLINQ
+DEBUG 2015-12-24 21:53:58,547 47382ms HomeController         Apply              - PLINQ
+DEBUG 2015-12-24 22:06:10,332 40838ms HomeController         Apply              - PLINQ
+DEBUG 2015-12-24 22:06:14,846 45352ms HomeController         Apply              - PLINQ
+DEBUG 2015-12-24 22:06:23,865 54372ms HomeController         Apply              - PLINQ
+DEBUG 2015-12-24 22:14:05,042 21278ms HomeController         LayoutList         - LINQ
+DEBUG 2015-12-24 22:14:26,046 42282ms HomeController         ServiceTypeList    - LINQ
+DEBUG 2015-12-24 22:15:52,793 32651ms HomeController         LayoutList         - LINQ
+DEBUG 2015-12-24 22:16:08,069 47927ms HomeController         ServiceTypeList    - LINQ
+DEBUG 2015-12-24 22:43:10,038 10586ms HomeController         LayoutList         - LINQ

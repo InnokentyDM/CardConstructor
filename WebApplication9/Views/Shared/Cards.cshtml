@@ -1,0 +1,67 @@
+﻿@model List<WebApplication9.Models.cards>
+
+@Scripts.Render("~/js/Application.js")
+@Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+
+<table class="table table-condensed table-hover">
+    <tr>
+        <th>
+            @Html.DisplayName("Макет")
+        </th>
+        <th></th>
+        <th>
+            @Html.DisplayName("Вид изделаия")
+        </th>
+        <th>
+            @Html.DisplayName("Размер")
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<input type="hidden" id="@("label"+item.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => item.image)" />
+            <input type="hidden" id="@("label_s2"+item.Id)" class="hiddenId_s2" value="@Html.DisplayFor(modelItem => item.image_side_2)" />
+            <input type="hidden" id="@("width"+item.Id)" class="hiddenWidth" value="@Html.DisplayFor(modelItem => item.layout.width)" />
+            <input type="hidden" id="@("height"+item.Id)" class="hiddenHeight" value="@Html.DisplayFor(modelItem => item.layout.height)" />
+            <td>
+                <canvas id="@Html.DisplayFor(modelItem => item.Id)" class="preview"></canvas>
+                <canvas id="@("s2" + item.Id)" class="preview_s2"></canvas>
+                @*<img id="@Html.DisplayFor(modelItem => item.Id)" class="imgpreview" />
+            </td>*@
+            <td>
+                <img src="@Url.Content(item.preview)" alt="Image" class="images" />
+            </td>
+            <td>
+                @if (item.preview_2 != null)
+                { 
+                <img src="@Url.Content(item.preview_2)" alt="Image" class="images" />
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ITEM_TYPE.NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.layout.name)
+            </td>
+            <td>
+                <div class="row">
+                    <div class="row"> 
+                        <div class="col-xs-6">
+                            @Html.ActionLink("Новая заявка", "../Home/SetCanvas/", "Home", new { id = item.Id }, new { @class = "btn btn-default btn-block" })
+                        </div>
+                        <div class="col-xs-6">
+                            @Html.ActionLink("Дополнительный тираж", "../Home/Apply/", "Home", new { id = item.Id }, new { @class = "btn btn-default btn-block" })
+                        </div>
+                        </div>
+                </div>
+               
+            </td>
+            <td></td>
+        </tr>
+    }
+
+</table>

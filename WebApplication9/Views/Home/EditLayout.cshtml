@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "EditLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@Scripts.Render("~/js/Edit.js")
+@Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+@Scripts.Render("~/js/fabric.js-1.5.0/lib/aligning_guidelines.js")
+@Scripts.Render("~/js/fabric.js-1.5.0/lib/centering_guidelines.js")
+
+
+@using (Html.BeginForm())
+{
+    <h2>Edit</h2>
+    <input type="hidden" id="cardId" value="@ViewBag.EditLayoutId" />
+    <input type="hidden" id="hiddenImage" value="@ViewBag.EditLayout" />
+    <canvas id="canvas" width="400px" height="300px"></canvas>
+    <p>
+        <input type="button" value="Save" id="save" />
+        <input type="button" value="New" id="saveNew" />
+    </p>
+}

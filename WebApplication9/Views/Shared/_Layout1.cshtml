@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+      
+        @Styles.Render("~/css/Main.css")
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+       @RenderSection("scripts", required: false)
+       
+    </head>
+    <body>
+        <div class="l-main">
+            <header class="l-header">
+                <div class="b-header">
+                    <p class="b-header">Курсовой проект: конструктор визиток.</p>
+                </div>
+            </header>
+
+            <nav class="b-main-nav">
+                <ul>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Applications", "ApplicationList")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Users", "Users")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Cards", "CardsList")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Layout", "LayoutList")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Materials", "MaterialsList")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Services", "ServiceTypeList")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("UserRole", "UserRoleList")</p></li>
+                    <li class="b-side-nav-item"><p class="b-link">@Html.ActionLink("Apply", "Apply")</p></li>
+
+                </ul>
+            </nav>
+            <section class="l-content">
+                <div class="b-main">
+                    @RenderBody()
+                </div>
+            </section>
+            <footer class="l-footer">
+                <div class="b-footer">
+
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

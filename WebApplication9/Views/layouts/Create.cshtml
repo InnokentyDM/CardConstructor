@@ -1,0 +1,97 @@
+﻿@model WebApplication9.Models.LayoutViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/scripts/jquery-1.10.2.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@section Scripts{
+
+    <script type="text/javascript">
+        $('#upload').change(function (e) {
+            if (this.files && this.files[0])
+            {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    </script>
+}
+
+
+
+
+<h2>Create</h2>
+
+<form action="" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="form-horizontal">
+        <h4>layout</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImageUpload, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ImageUpload, new { type = "file", id = "upload" })
+                @Html.ValidationMessageFor(model => model.ImageUpload)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.layout.ITEM_TYPE_ID, "ITEM_TYPE_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ITEM_TYPE_ID", String.Empty)
+                @Html.ValidationMessageFor(model => model.layout.ITEM_TYPE_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.layout.name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.layout.name)
+                @Html.ValidationMessageFor(model => model.layout.name)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.layout.width, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.layout.width)
+                @Html.ValidationMessageFor(model => model.layout.width)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.layout.height, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.layout.height)
+                @Html.ValidationMessageFor(model => model.layout.height)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Предпросмотр", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <img id="preview" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+ </form>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>

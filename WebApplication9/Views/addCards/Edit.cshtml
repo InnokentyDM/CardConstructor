@@ -1,0 +1,154 @@
+﻿@model WebApplication9.Models.addCards.addCardModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/Canvas.css")
+@Scripts.Render("~/scripts/jquery-1.10.2.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@*@Scripts.Render("~/js/UploadSVG.js")*@
+@Scripts.Render("~/js/Edit.js")
+@Scripts.Render("~/bundles/fabricjs")
+
+@section Scripts{
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#side2").click(function () {
+            $('#side1').toggleClass('disabled');
+            $('#side2').toggleClass('disabled');
+            $('#side1').toggleClass('btn-primary');
+            $('#side2').toggleClass('btn-primary');
+            $("#canvas_s2").toggleClass('hidden');
+            $("#imageLoader_s2").toggleClass('hidden');
+            $("#logoLoader").toggleClass('hidden');
+            $("#canvas").toggleClass('hidden');
+            $("#imageLoader").toggleClass('hidden');
+            $("#side2logo").toggleClass('hidden');
+            $("#fside").toggleClass('hidden');
+            $("#sside").toggleClass('hidden');
+            $("#ufside").toggleClass('hidden');
+            $("#usside").toggleClass('hidden');
+            $(".upper-canvas").toggleClass('hidden');
+        });
+    });
+    $(document).ready(function () {
+        $("#side1").click(function () {
+            $('#side1').toggleClass('disabled');
+            $('#side2').toggleClass('disabled');
+            $('#side1').toggleClass('btn-primary');
+            $('#side2').toggleClass('btn-primary');
+            $("#canvas_s2").toggleClass('hidden');
+            $("#imageLoader_s2").toggleClass('hidden');
+            $("#canvas").toggleClass('hidden');
+            $("#imageLoader").toggleClass('hidden');
+            $("#logoLoader").toggleClass('hidden');
+            $("#side2logo").toggleClass('hidden');
+            $("#fside").toggleClass('hidden');
+            $("#sside").toggleClass('hidden');
+            $("#ufside").toggleClass('hidden');
+            $("#usside").toggleClass('hidden');
+            $(".upper-canvas").toggleClass('hidden');
+        });
+    });
+    </script>
+}
+
+@using MvcCheckBoxList.Model
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>cards</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.cards.Id)
+        <div class="form-group">
+            @Html.LabelFor(model => model.cards.layout_id, "layout_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.layout_id, (SelectList)ViewBag.layout_id, String.Empty, new { id = "ddl1" })
+                @Html.ValidationMessageFor(model => model.cards.layout_id)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cards.text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cards.text)
+                @Html.ValidationMessageFor(model => model.cards.text)
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="row">
+                <div class="col-xs-6">
+                    <a href="#" id="side1" class="btn btn-default btn-primary disabled">Первая сторона</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" id="side2" class="btn btn-default">Вторая сторона</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+              
+                <input type="hidden" id="cardId" value="@ViewBag.EditLayoutId" />
+                @Html.HiddenFor(model => model.cards.IMAGES.Image, new { id = "hiddenImage" })
+                @Html.HiddenFor(model => model.cards.IMAGES.Image_2, new { id = "hiddenImage_s2" })
+                <div class="col-xs-5">
+                    <div class="row">
+                        <canvas id="canvas"></canvas>
+                        <canvas id="canvas_s2" class="hidden"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <button type="button" class="btn btn-default" id="reset">Перезагрузить макет</button>
+        </div>
+        <div class="col-xs-2">
+            <table>
+                <tr>
+                    <td>@Html.CheckBox("Защитные поля", true, new { id = "chkBox" })</td>
+                    <td>@Html.Label("Защитные поля")</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="b-checkboxlist">
+            <br />
+            @Html.CheckBoxListFor(model => model.postedItems.IDs,
+                                      model => model.availItems,
+                                      i => i.Name,
+                                      i => i.Name,
+                                      model => model.selectedItems,
+                                      Position.Vertical)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cards.published, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cards.published)
+                @Html.ValidationMessageFor(model => model.cards.published)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" id="save" />
+                <input type="submit" value="New" id="saveTo" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

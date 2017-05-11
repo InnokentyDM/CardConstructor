@@ -1,0 +1,185 @@
+﻿body {
+    padding-top: 50px;
+    
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar-inverse{
+    background-color: #dadada;
+    margin: 0px 0px 0px 0px;
+    border: none;
+}
+
+.navbar-inverse .navbar-header{
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+}
+
+.navbar-inverse .navbar-header a{
+    color: #ffffff;
+     font-size: 28px;
+     text-align: center;
+}
+
+.navbar-inverse .navbar-nav li a{
+    color: #7c7c7c;
+}
+
+.panel-card{
+    background: #ffffff;
+    padding: 0;
+   
+}
+
+.panel-card:hover{
+    background: rgb(255,255,255);
+    
+}
+
+.panel-card-footer{
+    text-align: center;
+    margin-top: 10px;   
+}
+
+.panel-card-footer ul{
+    text-align: center;
+    
+}
+
+.panel-card-footer button{
+    color: #7c7c7c;
+}
+
+.panel-card-footer button:hover{
+    color: #7c7c7c;
+}
+
+
+.panel-body img.images{
+    margin: 0px auto;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.card-menu{
+    list-style-type: none;
+}
+
+#new-card{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hr-custom {
+ display: block;
+    color: rgb(75, 75, 75);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 3.5em;
+    margin-right: 3.5em;
+    border-style: inset;
+    border-width: 1px;
+ 
+    width: 97%;
+
+  
+}
+
+.card-container {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.info-header{
+    font-size: 28px;
+    text-align: center;
+}
+
+.info-header-color{
+     color: rgb(75, 75, 75);
+}
+
+.info-body-color{
+    color: rgb(81, 81, 81);
+    font-size: 16px;
+}
+
+.layout-type-b{
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    width: 100%;
+}
+
+.panel-card-b{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.header-menu-dropdown
+{
+    font-size: 20px;
+}
+
+.header-menu-dropdown a
+{
+    color: rgb(75, 75, 75);
+}
+
+.header-menu-dropdown button.btn-link:hover
+{
+    text-decoration: none;
+    border-bottom: none;
+    color: #333333;
+}
+
+.images {
+    margin: 0 auto;
+}
+
+.card-wrapper{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,145 @@
+﻿@model IEnumerable<WebApplication9.Models.application>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="scrolList">
+    @Html.Partial("_AppItems")
+</div>
+
+<div id="loading"><img src='@Url.Content("~/Content/loading_spinner.gif")'></div>
+
+<script type="text/javascript">
+$(function () {
+
+    $('div#loading').hide();
+
+    var page = 0;
+    var _inCallback = false;
+    function loadItems() {
+        if (page > -1 && !_inCallback) {
+            _inCallback = true;
+            page++;
+            $('div#loading').show();
+
+            $.ajax({
+                type: 'GET',
+                url: '/applications/Index/' + page,
+                success: function (data, textstatus) {
+                    if (data != '') {
+                        $("#scrolList").append(data);
+                    }
+                    else {
+                        page = -1;
+                    }
+                    _inCallback = false;
+                    $("div#loading").hide();
+                }
+            });
+        }
+    }
+    // обработка события скроллинга
+    $(window).scroll(function () {
+        if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+            loadItems();
+        }
+    });
+})
+</script>
+
+@*@Scripts.Render("~/js/Application.js")
+@Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#hiddenId_s2').toggleClass('hidden');
+        });  
+    </script>
+    }
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Макет")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.insertionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finishDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.summ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COUNT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.materials.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUsers.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cards.text)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <input type="hidden" id="@("label"+item.cards.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => item.cards.image)" />
+            <input type="hidden" id="@("label_s2"+item.cards.Id)" class="hiddenId_s2" value="@Html.DisplayFor(modelItem => item.cards.image_side_2)" />
+            <input type="hidden" id="@("width"+item.Id)" class="hiddenWidth" value="@Html.DisplayFor(modelItem => item.cards.layout.width)" />
+            <input type="hidden" id="@("height"+item.Id)" class="hiddenHeight" value="@Html.DisplayFor(modelItem => item.cards.layout.height)" />
+            <canvas id="@Html.DisplayFor(modelItem => item.cards.Id)" class="preview"></canvas>
+            <canvas id="@("s2" + item.cards.Id)" class="preview_s2"></canvas>
+            @*<img id="@Html.DisplayFor(modelItem => item.Id)" class="imgpreview" />
+       
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.insertionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.finishDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.summ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COUNT.COUNT_VALUE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.materials.description)
+        </td>
+        <td>
+            @Html.ActionLink(item.AspNetUsers.UserName, "../AspNetUsers/Details", new { id = item.AspNetUsers.Id })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cards.text)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>*@

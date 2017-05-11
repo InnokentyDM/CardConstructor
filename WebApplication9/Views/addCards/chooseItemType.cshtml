@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebApplication9.Models.ITEM_TYPE>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <p>@Html.ActionLink(item.NAME, "../addCards/Create/", new { type_id = item.NAME })</p>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model WebApplication9.Models.Delivery
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Delivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.House)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.House)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apartment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apartment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Towns.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Towns.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

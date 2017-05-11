@@ -1,0 +1,77 @@
+﻿@model WebApplication9.Models.application
+
+@{
+    ViewBag.Title = "YandexPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Подтверждение заявки</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.insertionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.insertionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.summ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.summ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNT.COUNT_VALUE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNT.COUNT_VALUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cards.text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cards.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayFor(model => model.cards.image_side_2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.image_side_2)
+        </dd>
+
+        <dt>
+            @Html.DisplayFor(model => model.cards.ITEM_TYPE.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.ITEM_TYPE.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayFor(model => model.cards.layout.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.layout.name)
+        </dd>
+    </dl>
+</div>

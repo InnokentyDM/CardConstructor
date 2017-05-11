@@ -1,0 +1,77 @@
+﻿@model WebApplication9.Models.cards
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Scripts.Render("~/js/details.js")
+@Scripts.Render("~/bundles/fabricjs")
+
+<h2>Details</h2>
+
+<div>
+    <h4>cards</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMAGES)
+        </dt>
+
+        <input type="hidden" id="hiddencanvas" class="hiddenId" value="@Html.DisplayFor(model => model.IMAGES.Image)" />
+        <dd>
+            <canvas id="canvas" class="preview" width="400px" height="300px"></canvas>
+        </dd>
+
+        <input type="hidden" id="hiddencanvas_s2" class="hiddenId" value="@Html.DisplayFor(model => model.IMAGES.Image_2)" />
+        <dd>
+            <canvas id="canvas_s2" class="hidden" width="400px" height="300px"></canvas>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.published)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUsers.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUsers.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.layout.width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.layout.width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_TYPE.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_TYPE.NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

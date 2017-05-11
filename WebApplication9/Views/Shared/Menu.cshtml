@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebApplication9.Models.ITEM_TYPE>
+
+
+<ul class="nav navbar-nav">
+    <li>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle header-menu-dropdown" type="button" data-toggle="dropdown">
+                Услуги
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                @foreach (var i in Model)
+                {
+                    <li>
+                        @Html.ActionLink(i.NAME, "../Home/exSearch/", new { id = i.Id })
+                    </li>
+                }
+            </ul>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,218 @@
+﻿@model WebApplication9.Models.addCards.addCardModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/Canvas.css")
+@Scripts.Render("~/bundles/fabricjs")
+@Scripts.Render("~/scripts/jquery-1.10.2.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@Scripts.Render("~/js/UploadSVG.js")
+
+@section Scripts{
+
+<script type="text/javascript">
+   
+    $(document).ready(function () {
+        $("#textstyle").popover({
+            title: 'Стиль текста',
+            content: '',
+            trigger: 'hover',
+            placement: 'right'
+        });
+    });
+    $(document).ready(function () {
+        $("#textcolor").popover({
+            title: 'Цвет текста',
+            content: '',
+            trigger: 'hover',
+            placement: 'right'
+        });
+    });
+
+
+</script>
+}
+
+@using MvcCheckBoxList.Model
+
+
+<button class="btn btn-default" id="undo">Вперед</button>
+<button class="btn btn-default" id="redo">Назад</button>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+  <div class="form-horizontal">
+   
+        <hr />
+        @Html.ValidationSummary(true)
+      
+      <div class="container">
+          <div class="col-xs-12">
+                  <div class="row panel panel-default panel-body">
+                      <div class="col-xs-3">
+                          <div class="row">
+                              <div class="col-xs-2">
+                                  @Html.DropDownList("Размер шрифта", new SelectList(
+    new List<SelectListItem>
+    {
+       new SelectListItem { Selected = true, Text = "8", Value = "8"},
+        new SelectListItem { Selected = true, Text = "10", Value = "10"},
+        new SelectListItem { Selected = true, Text = "12", Value = "12"},
+        new SelectListItem { Selected = true, Text = "14", Value = "14"},
+        new SelectListItem { Selected = true, Text = "16", Value = "16"},
+        new SelectListItem { Selected = true, Text = "18", Value = "18"},
+        new SelectListItem { Selected = true, Text = "20", Value = "20"},
+        new SelectListItem { Selected = true, Text = "24", Value = "24"},
+        new SelectListItem { Selected = true, Text = "28", Value = "28"},
+        new SelectListItem { Selected = true, Text = "32", Value = "32"},
+        new SelectListItem { Selected = true, Text = "36", Value = "36"},
+        new SelectListItem { Selected = true, Text = "42", Value = "42"},
+    }, "Value", "Text", 1), String.Empty, new { id = "textddl", @class = "col-xs-12" })
+                              </div>
+                              <div class="col-xs-4">
+                                  @Html.DropDownList("Размер шрифта", new SelectList(
+    new List<SelectListItem>
+    {
+        new SelectListItem { Selected = true, Text = "Marck Script", Value = "Marck Script"},
+        new SelectListItem { Selected = true, Text = "Seymour One", Value = "Seymour One"},
+        new SelectListItem { Selected = true, Text = "Open Sans", Value = "Open Sans"},
+        new SelectListItem { Selected = true, Text = "Roboto", Value = "Roboto"},
+        new SelectListItem { Selected = true, Text = "Roboto Condensed", Value = "Roboto Condensed"},
+    }, "Value", "Text", 1), String.Empty, new { id = "styleddl", @class = "col-xs-12" })
+                              </div>
+                              <div class="col-xs-2">
+                                  @*<button type="button" id="textcolor" alt="Цвет текста" class="btn btn-default" data-toggle="popover">A</button>*@
+                                  <input type="color" value="#ffffff" id="color" alt="Цвет текста" class="btn-default" data-toggle="popover">
+                              </div>
+                              <div class="col-xs-1"></div>
+                              <div class="col-xs-2">
+                                  <button type="button" id="textstyle" alt="Стиль текста" class="btn btn-default" data-toggle="popover">B</button>
+                              </div>
+                          </div>
+                          <div class="row">
+
+                              <div class="col-xs-6">
+                                  <button type="button" class="btn btn-default" id="clear">Очистить</button>
+                              </div>
+                              <div class="col-xs-2">
+                                  <table><tr>
+                                      <td>@Html.CheckBox("Защитные поля", true, new { id = "chkBox" })</td>
+                                      <td>@Html.Label("Защитные поля")</td></tr></table>
+                                  
+                                  
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="col-xs-3">
+                          <div class="col-md-8">
+                              @Html.HiddenFor(model => model.cards.IMAGES.Image, new { id = "hiddenImage" })
+                              @Html.HiddenFor(model => model.cards.IMAGES.Image_2, new { id = "hiddenImage_s2" })
+                              @Html.HiddenFor(model => model.cards.preview, new { id = "preview" })
+                              @Html.HiddenFor(model => model.cards.preview_2, new { id = "preview_2" })
+                              <label>Макет:</label><br />
+                              <input type="file" id="imageLoader" name="imageLoader" />
+                              <input type="file" id="imageLoader_s2" name="imageLoader_s2" class="hidden" />
+                          </div>
+                          <div class="col-md-2"></div>
+                      </div>
+
+                      <div class="col-xs-3">
+                          <div class="row">
+                              <div class="col-xs-6">                                                                
+                                  <a href="#" id="side1" class="btn btn-default btn-primary disabled">Первая сторона</a>                                                                                              
+                              </div>
+
+
+                              <div class="col-xs-6">                              
+                                      <a href="#" id="side2" class="btn btn-default hidden">Вторая сторона</a>                                                                     
+                                      <a href="#" id="deleteside2" class="control-label col-md-2 hidden">Удалить вторую сторону</a>
+                                      <a href="#" id="addside2" class="control-label col-md-2">Добавить вторую сторону</a>
+                              </div>                           
+                          </div>
+                      </div>
+                  </div>
+              
+              <div class="row">
+                  <div class="col-xs-4">
+                      <div class="container panel panel-default panel-body">
+                          <div class="col-xs-12">
+                              <div class="row">
+                                  <div class="col-xs-2">
+                                      @Html.LabelFor(model => model.cards.layout_id, "Размер")
+                                  </div>
+                                  <div class="col-xs-8">
+                                      @Html.DropDownListFor(model => model.layout_id, (SelectList)ViewBag.layout_id, String.Empty, new { id = "ddl1", @class = "col-xs-12" })
+                                      @Html.ValidationMessageFor(model => model.cards.layout_id)
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                  <div class="col-xs-2">
+                                      @Html.LabelFor(model => model.cards.text, "Комментарий")
+                                  </div>
+                                  <div class="col-xs-8">
+                                      @Html.EditorFor(model => model.cards.text)
+                                      @Html.ValidationMessageFor(model => model.cards.text)
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                  <div class="col-xs-2">
+                                      @Html.LabelFor(model => model.cards.published, "Публикация")
+                                  </div>
+                                  <div class="col-xs-8">
+                                      @Html.EditorFor(model => model.cards.published)
+                                      @Html.ValidationMessageFor(model => model.cards.published)
+                                  </div>
+                              </div>
+
+
+                          </div>
+                          <div class="col-xs-12">
+                              <div class="row">
+
+                                  <div class="col-xs-12">
+                                      <br />
+                                      @Html.CheckBoxListFor(model => model.postedItems.IDs,
+                                      model => model.availItems,
+                                      i => i.Name,
+                                      i => i.Name,
+                                      model => model.selectedItems,
+                                      Position.Vertical)
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-xs-5">
+                      <div class="row">
+                          <canvas id="canvas"></canvas>
+                          <canvas id="canvas_s2" class="hidden"></canvas>
+                      </div>           
+                  </div>
+
+                  <div class="col-xs-3">
+                 
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-2">
+                      @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-default col-xs-2" })
+                  </div>
+                  <div class="col-xs-8"></div>
+                  <input type="submit" value="OK" id="canvasToImage" class="btn btn-default col-xs-2" />
+              </div>
+          </div>
+      </div>  
+    </div>
+}
+
+

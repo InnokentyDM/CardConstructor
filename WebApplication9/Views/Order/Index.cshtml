@@ -1,0 +1,23 @@
+﻿@model WebApplication9.Models.OrderModel
+@{
+    ViewBag.Title = "orderModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Оплата товара @Model.OrderId</h2>
+<div>
+    <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+        <input name="label" value="@Model.OrderId" type="hidden">
+        <input name="receiver" value="410012188165850" type="hidden">
+        <input name="quickpay-form" value="shop" type="hidden">
+        <input type="hidden" name="targets" value="Оплата заказа @Model.OrderId">
+        <label for="sum">Сумма: </label><br />
+        <input name="sum" value="@Model.Sum" maxlength="10" data-type="number" type="text"><br /><br />
+        <label for="sum">Способ оплаты: </label><br />
+        <input type="radio" name="paymentType" value="PC">Яндекс.Деньгами
+        <input type="radio" name="paymentType" value="AC">Банковской картой<br /><br />
+        <input type="submit" name="submit-button" value="Оплатить">
+        <input name="successURL" value="https://profdesign.pro/Home/Paid" type="hidden">
+        <input name="quickpay-back-url" value="https://profdesign.pro/" type="hidden">
+    </form>
+</div>

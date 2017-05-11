@@ -1,0 +1,273 @@
+﻿@model IEnumerable<WebApplication9.Models.ITEM_TYPE>
+    @using WebApplication9.Models;
+
+@{
+    ViewBag.Title = "Конструктор визиток";
+}
+
+@*@Scripts.Render("https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")*@
+@Scripts.Render("~/js/Application.js")
+@*@Scripts.Render("~/js/flip.js")*@
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.js"></script>
+
+<script>
+    function onFavoriteButtonClick(e)
+    {
+        var id = e.id.replace('btn', '');
+
+        //var url = 'fabroites/addToFavorite' + e.value;
+        $.ajax({
+            type: 'POST',
+            url: "/favorites/addToFavorite/",
+            data: { id: id },
+            success: function (data, status) {
+                if (data == 'added')
+                {
+                console.log(data);
+                $('#' + e.id).removeClass('btn btn-default');
+                $('#' + e.id).addClass('btn btn-warning');
+                }
+                else if(data == 'removed')
+                {
+                    console.log(data);
+                    $('#' + e.id).removeClass('btn btn-warning');
+                    $('#' + e.id).addClass('btn btn-default');
+                }
+                else
+                {
+                    console.log(data);
+                }
+            }
+        }).error(function (err) {
+            console.log(err);
+        });
+    }
+    //$(document).ready(function () {
+    //var flipArr = document.getElementsByClassName('flip');
+    //var btnFlip = document.getElementsByClassName('btn-flip');
+ 
+    //for (var i = 0; i < flipArr.length-1; i++)
+    //{
+    //    var btn = btnFlip[i];
+    //    var flips = '#' + flipArr[i].id;
+    //    btn.addEventListener('click', flip(flips));
+     
+    //    //$('#'+btn).click(function () {
+           
+    //    //});      
+    //}
+    //function flip(flips)
+    //{
+    //  $(flips).toggleClass('flipped');
+    //}
+
+    //});
+        function flip()
+        {
+            var btn = event.currentTarget.id;
+            var res = "c";
+            for (var i = 0; i < btn.length; i++)
+            {
+                if (btn[i] != "b")
+                {
+                    res += btn[i];
+                }
+            }
+            $("#" + res).toggleClass('flipped');
+        }
+
+        function right()
+        {
+            var par = event.target.parentNode;
+            var parpar = par.parentNode;
+            var parparpar = parpar.parentNode;
+            for (var i = 0; i < parparpar.childNodes.length; i++)
+            {
+                if (parparpar.childNodes[i].className == "col-xs-12 cards-monitor")
+                {
+                    var item = parparpar.childNodes[i];
+                    for (var j = 0; j < item.childNodes.length; j++)
+                    {
+                    if (item.childNodes[j].className == "cards-container-padding")
+                        {
+                            var mgLeft = parseInt(item.childNodes[j].style.marginLeft, 10);
+                            if (isNaN(mgLeft))
+                            {
+                                mgLeft = 0;
+                            }
+                            $(item.childNodes[j]).animate({
+                                marginLeft: '-=200px'
+                            }, 500);
+                        }
+                    }
+                   
+                }
+            }
+           
+        }
+        function left()
+        {
+            var par = event.target.parentNode;
+            var parpar = par.parentNode;
+            var parparpar = parpar.parentNode;
+            
+            for (var i = 0; i < parparpar.childNodes.length; i++)
+            {
+                if (parparpar.childNodes[i].className == "col-xs-12 cards-monitor")
+                {
+                    var item = parparpar.childNodes[i];
+                    for (var j = 0; j < item.childNodes.length; j++)
+                    {
+                        if (item.childNodes[j].className == "cards-container-padding")
+                        {
+                            var mgLeft = parseInt(item.childNodes[j].style.marginLeft, 10);
+                            if (mgLeft != 0)
+                            {
+                                if (isNaN(mgLeft))
+                                {
+                                    mgLeft = 0;
+                                }
+                               
+                                //for (var k = 0; k <= 200; k++)
+                                //{
+                                //    setTimeout('', 10);
+                                //    mgLeft += 1;   
+                                ////}
+                                //item.childNodes[j].style.marginLeft = "" + mgLeft + "px";
+                                $(item.childNodes[j]).animate({
+                                    marginLeft: '+=200px'
+                                }, 500);
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+</script>
+<table class="table">
+<div id="main">
+<div class="row layout-type-b">
+        @foreach (var key in (List<KeyValuePair<layout, List<cards>>>)ViewBag.cards)
+        {
+            
+                if (key.Value.Count > 0)
+                {
+                    <div class="row card-wrapper col-xs-12">
+                        <div class="col-xs-2 card-container">
+                            @if (key.Key.name != null || key.Key.Image != null)
+                    {
+                                <ul class="card-menu">
+                                    <li class="info-header">
+                                        @Html.ActionLink(key.Key.ITEM_TYPE.NAME, "../Home/exSearch/", new { id = key.Key.ITEM_TYPE.Id }, new { @class = "info-header-color" })
+                                    </li>
+                                    <li class="info-header">
+                                        @Html.ActionLink(key.Key.name, "", new { id = key.Key.Id }, new { @class = "info-header-color" })
+                                    </li>
+                                    <li class="info-header">
+                                        @Html.ActionLink(key.Key.width + "x " + key.Key.height + "мм", "", new { id = key.Key.Id }, new { @class = "info-body-color" })
+                                    </li>
+                                </ul>
+                            }
+                        </div>
+                        <div class="col-xs-10 card-container">
+                            <div class="arr-nav">
+                                <button class="btn btn-link card-nav" onclick="left()" id="card-nav-left"><span class="glyphicon glyphicon-arrow-left"></span></button>
+                                <button class="btn btn-link card-nav" onclick="right()" id="card-nav-right"><span class="glyphicon glyphicon-arrow-right"></span></button>
+                            </div>  
+                            <div class="col-xs-12 cards-monitor">
+                                                 
+                            <div class="cards-container-padding">
+                            @foreach (var i in key.Value)
+                            {
+                                <div class="panel-card-b">
+                                    <div class="panel-card">
+                                        <input type="hidden" id="@("width" + i.Id)" class="hiddenWidth" value="@Html.DisplayFor(modelItem => i.layout.width)" />
+                                        <input type="hidden" id="@("height" + i.Id)" class="hiddenHeight" value="@Html.DisplayFor(modelItem => i.layout.height)" />
+                                        @*<input type="hidden" id="@("label"+i.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => i.image)" />*@
+                                        @*<input type="hidden" id="@("label_s2"+i.Id)" class="hiddenId_s2" value="@Html.DisplayFor(modelItem => i.image_side_2)" />*@
+                                        <a href="/Home/SetCanvas/@i.Id">
+                                            <div class="panel-body no-padding">
+                                                @*<canvas id="@Html.DisplayFor(modelItem => i.Id)" class="preview"></canvas>
+                                                    <canvas id="@("s2" + i.Id)" class="preview_s2"></canvas>*@
+                                                <section class="flip-container">
+                                                    <div id="@("c" + i.Id)" class="flip flipped-card">
+                                                        <div class="front">
+                                                            <img src="@Url.Content(i.preview)" alt="Image" class="images" />
+                                                        </div>
+                                                        <div class="back">
+                                                            @if (i.preview_2 != null)
+                                                            {
+                                                                <img src="@Url.Content(i.preview_2)" alt="Image" class="images" />
+                                                            }
+                                                            else
+                                                            {
+                                                                <p>Вторая</p>
+                                                                <p>сторона</p>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </section>                                
+                                            </div>
+                                        </a>
+                                        <div class="panel-card-footer">
+                                            <div class="row">
+                                                <button class="btn btn-default" onclick="location.href='@Url.Action("SetCanvas", "Home", new { id = i.Id })'"><span class="glyphicon glyphicon-pencil"></span></button>
+
+                                                <button class="btn btn-default btn-flip" onclick="flip()" id="@("b" + i.Id)"><span class="glyphicon glyphicon-refresh"></span></button>
+
+                                                <button class="btn btn-default" id="@("btn" + i.Id)" onclick="onFavoriteButtonClick(this)"><span class="glyphicon glyphicon-heart"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                if ((List<favorite>)ViewBag.favorites != null)
+                                {
+                                    foreach (var it in (List<favorite>)ViewBag.favorites)
+                                    {
+                                        if (it.card_id == i.Id)
+                                        {
+                                            <script>
+                                                $('#btn' + @i.Id).removeClass("btn btn-default");
+                                                $('#btn' + @i.Id).addClass("btn btn-warning");
+                                            </script>
+
+                                        }
+                                    }
+                                }
+                            }
+
+
+
+                                <div class="panel-card-b">
+                                    <div class="panel-card">
+                                        
+                                            <div class="panel-body no-padding">                                           
+                                                @Html.ActionLink("Еще", "../Home/exSearch/", new { id = key.Key.ITEM_TYPE.Id }, new { @class = "info-header-color" })
+                                            </div>
+                                       
+                                        <div class="panel-card-footer">
+                                            <div class="row">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-custom" size="2px" />
+                }
+
+        }
+    
+
+    </div>
+    </div>
+</table>
+
+

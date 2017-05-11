@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApplication9.Models.cards>
+@*@{
+        ViewBag.Title = "GroupedCards";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    @Scripts.Render("~/js/Application.js")
+    @Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+    @using MvcCheckBoxList.Model
+    <h2>GroupedCards</h2>
+    @using (Html.BeginForm())
+    {
+    foreach (var item in Model)
+    {
+        @Html.Encode(item.Key)
+        <br />
+        @Html.CheckBoxListFor(modelItem => item.Value.postedItems.IDs,
+                                      modelItem => item.Value.availItems,
+                                      i => i.Id,
+                                      i => i.Name,
+                                      modelItem => item.Value.selectedItems,
+                                      Position.Vertical)
+    }
+        <p>
+            <input type="submit" value="Применить" />
+        </p>
+    }*@
+@{
+    ViewBag.Title = "GroupedCards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/js/Application.js")
+@Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+
+@Html.ActionLink("Расширенный поиск", "../Home/exSearch")
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.text)
+        </th>
+      
+        <th></th>
+    </tr>
+
+    @foreach (var group in Model.GroupBy(c => c.CARD_CLAIMS))
+    {
+        
+        foreach (var item in group)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    <input type="hidden" id="@("label"+item.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => item.IMAGES.Image)" />
+              
+                </td>
+
+                <td>
+                    <canvas id="@Html.DisplayFor(modelItem => item.Id)" class="preview" width="400" height="300"></canvas>
+                </td>
+
+            </tr>
+        }
+    }
+
+</table>
+
+
+

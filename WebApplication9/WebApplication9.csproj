@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA0D153F-582A-467A-B6DC-7A3F2011F03A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication9</RootNamespace>
+    <AssemblyName>WebApplication9</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44303</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Duke.Owin.VkontakteMiddleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Duke.Owin.VkontakteMiddleware.1.2.0.0\lib\net45\Duke.Owin.VkontakteMiddleware.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcCheckBoxList, Version=1.4.4.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcCheckBoxList.1.4.4.5\lib\net45\MvcCheckBoxList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\addCardsController.cs" />
+    <Compile Include="Controllers\ApplicationManagerController.cs" />
+    <Compile Include="Controllers\applicationsController.cs" />
+    <Compile Include="Controllers\AspNetRolesController.cs" />
+    <Compile Include="Controllers\AspNetUsersController.cs" />
+    <Compile Include="Controllers\cardsController.cs" />
+    <Compile Include="Controllers\CARD_CLAIMSController.cs" />
+    <Compile Include="Controllers\COUNTsController.cs" />
+    <Compile Include="Controllers\DeliveriesController.cs" />
+    <Compile Include="Controllers\elementsController.cs" />
+    <Compile Include="Controllers\ELEMENTS_TYPESController.cs" />
+    <Compile Include="Controllers\favoritesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ITEM_TYPEController.cs" />
+    <Compile Include="Controllers\layoutsController.cs" />
+    <Compile Include="Controllers\materialsController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\TownsController.cs" />
+    <Compile Include="DAO\ApplicationDAO.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512180906537_user.cs" />
+    <Compile Include="Migrations\201512180906537_user.Designer.cs">
+      <DependentUpon>201512180906537_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512181042171_us.cs" />
+    <Compile Include="Migrations\201512181042171_us.Designer.cs">
+      <DependentUpon>201512181042171_us.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\addCards\addCardModel.cs" />
+    <Compile Include="Models\addCards\checkBoxListModel.cs" />
+    <Compile Include="Models\addCards\ExtandedSearchModel.cs" />
+    <Compile Include="Models\addCards\PostedItems.cs" />
+    <Compile Include="Models\application.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApplyModel.cs" />
+    <Compile Include="Models\AppDbInitializer.cs" />
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cards.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CARD_CLAIMS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COUNT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Delivery.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\elements.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ELEMENTS_TYPES.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exSearch\checkBoxListModel.cs" />
+    <Compile Include="Models\exSearch\ExtandedSearchModel.cs" />
+    <Compile Include="Models\exSearch\PostedItems.cs" />
+    <Compile Include="Models\exSearch\Search.cs" />
+    <Compile Include="Models\favorite.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IMAGES.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ImageViewModel.cs" />
+    <Compile Include="Models\ITEM_TYPE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\layout.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LayoutViewModel.cs" />
+    <Compile Include="Models\materials.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\Towns.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\aspnet-WebApplication9-20151218112142.mdf" />
+    <Content Include="App_Data\aspnet-WebApplication9-20151218112142_log.ldf">
+      <DependentUpon>aspnet-WebApplication9-20151218112142.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\card_contructor.mdf" />
+    <Content Include="App_Data\card_contructor_log.ldf">
+      <DependentUpon>card_contructor.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Canvas.css" />
+    <Content Include="Content\font-awesome-4.6.3\css\font-awesome.css" />
+    <Content Include="Content\font-awesome-4.6.3\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Content Include="Content\Main.css" />
+    <Content Include="Content\Style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Files\ripple.gif" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="js\AllNewCard.js" />
+    <Content Include="js\Application.js" />
+    <Content Include="js\ApplyProcess.js" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\index-svg.html" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\index.html" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\index.svg" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\jquery.min.js" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\qrcode.js" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\qrcode.min.js" />
+    <Content Include="js\details.js" />
+    <Content Include="js\Edit.js" />
+    <Content Include="js\fabric.js-1.5.0\build.js" />
+    <Content Include="js\fabric.js-1.5.0\create_build_script.js" />
+    <Content Include="js\fabric.js-1.5.0\dist\fabric.js" />
+    <Content Include="js\fabric.js-1.5.0\dist\fabric.min.js" />
+    <Content Include="js\fabric.js-1.5.0\dist\fabric.require.js" />
+    <Content Include="js\fabric.js-1.5.0\HEADER.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\aligning_guidelines.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\centering_guidelines.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\cufon.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\event.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\excanvas.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\google_closure_compiler.jar" />
+    <Content Include="js\fabric.js-1.5.0\lib\json2.js" />
+    <Content Include="js\fabric.js-1.5.0\lib\screenshot.png" />
+    <Content Include="js\fabric.js-1.5.0\lib\yuicompressor-2.4.6.jar" />
+    <Content Include="js\fabric.js-1.5.0\src\amd\requirejs.js" />
+    <Content Include="js\fabric.js-1.5.0\src\brushes\base_brush.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\brushes\circle_brush.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\brushes\pattern_brush.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\brushes\pencil_brush.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\brushes\spray_brush.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\canvas.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\color.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\elements_parser.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\base_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\blend_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\brightness_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\convolute_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\gradienttransparency_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\grayscale_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\invert_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\mask_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\multiply_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\noise_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\pixelate_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\removewhite_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\resize_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\sepia2_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\sepia_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\filters\tint_filter.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\gradient.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\intersection.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\log.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\animation.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\canvas_dataurl_exporter.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\canvas_events.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\canvas_gestures.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\canvas_grouping.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\canvas_serialization.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\collection.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\itext.svg_export.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\itext_behavior.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\itext_click_behavior.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\itext_key_behavior.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\object.svg_export.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\object_geometry.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\object_interactivity.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\object_origin.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\object_stacking.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\object_straightening.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\observable.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\mixins\stateful.mixin.js" />
+    <Content Include="js\fabric.js-1.5.0\src\node.js" />
+    <Content Include="js\fabric.js-1.5.0\src\parser.js" />
+    <Content Include="js\fabric.js-1.5.0\src\pattern.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\point.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shadow.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\circle.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\ellipse.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\group.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\image.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\itext.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\line.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\object.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\path.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\path_group.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\polygon.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\polyline.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\rect.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\text.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\shapes\triangle.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\static_canvas.class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\animate.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\anim_ease.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\arc.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\dom_event.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\dom_misc.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\dom_request.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\dom_style.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\lang_array.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\lang_class.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\lang_function.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\lang_object.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\lang_string.js" />
+    <Content Include="js\fabric.js-1.5.0\src\util\misc.js" />
+    <Content Include="js\fabric.js-1.5.0\test.js" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\car.svg" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\greyfloral.png" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\path.svg" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\svg_with_rect.svg" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\test_image.gif" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\test_script.js" />
+    <Content Include="js\fabric.js-1.5.0\test\fixtures\very_large_image.jpg" />
+    <Content Include="js\fabric.js-1.5.0\test\lib\canvas_assertions.js" />
+    <Content Include="js\fabric.js-1.5.0\test\lib\event.simulate.js" />
+    <Content Include="js\fabric.js-1.5.0\test\lib\qunit.css" />
+    <Content Include="js\fabric.js-1.5.0\test\lib\qunit.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\canvas.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\canvas_static.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\circle.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\color.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\ellipse.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\gradient.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\group.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\image.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\image_filters.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\itext.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\line.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\object.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\object_interactivity.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\observable.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\parser.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\path.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\path_group.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\pattern.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\polygon.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\polyline.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\rect.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\shadow.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\text.js" />
+    <Content Include="js\fabric.js-1.5.0\test\unit\util.js" />
+    <Content Include="js\flip.js" />
+    <Content Include="js\jsPDF-master\build.js" />
+    <Content Include="js\jsPDF-master\dist\jspdf.debug.js" />
+    <Content Include="js\jsPDF-master\dist\jspdf.min.js" />
+    <Content Include="js\jsPDF-master\doc\files.html" />
+    <Content Include="js\jsPDF-master\doc\index.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\FontObject.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\jsPDF-jsPDF.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\jsPDF-PubSub.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\jsPDF.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\jsPDFClass.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\PubSub.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\src\c__work_jsPDF_jspdf.js.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\src\c__work_jsPDF_tools_jspdf.js.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\src\jspdf.js.html" />
+    <Content Include="js\jsPDF-master\doc\symbols\_global_.html" />
+    <Content Include="js\jsPDF-master\examples\annotation\test_annotation.html" />
+    <Content Include="js\jsPDF-master\examples\annotation\test_annotation_2.html" />
+    <Content Include="js\jsPDF-master\examples\basic.html" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\css\bootstrap.css" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\css\bootstrap.min.css" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\js\bootstrap.js" />
+    <Content Include="js\jsPDF-master\examples\bootstrap\js\bootstrap.min.js" />
+    <Content Include="js\jsPDF-master\examples\context2d\test_context2d.html" />
+    <Content Include="js\jsPDF-master\examples\context2d\test_context2d_paths.html" />
+    <Content Include="js\jsPDF-master\examples\css\editor.css" />
+    <Content Include="js\jsPDF-master\examples\css\main.css" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="js\jsPDF-master\examples\css\smoothness\jquery-ui-1.8.17.custom.css" />
+    <Content Include="js\jsPDF-master\examples\downloadify.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\auto_break.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\examples.css" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\images\favicon.png" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\lists.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\page_break.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\pdf.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\pdf2.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\showcase.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\showcase_supported_html.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\simple.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\tables.html" />
+    <Content Include="js\jsPDF-master\examples\html2pdf\total_mess.html" />
+    <Content Include="js\jsPDF-master\examples\images.html" />
+    <Content Include="js\jsPDF-master\examples\images\24_bit.png" />
+    <Content Include="js\jsPDF-master\examples\images\32_bit.png" />
+    <Content Include="js\jsPDF-master\examples\images\grayscale_16bpc.png" />
+    <Content Include="js\jsPDF-master\examples\images\grayscale_8bpc.png" />
+    <Content Include="js\jsPDF-master\examples\images\grayscale_alpha_16_bpc.png" />
+    <Content Include="js\jsPDF-master\examples\images\grayscale_alpha_8bpc.png" />
+    <Content Include="js\jsPDF-master\examples\images\grid.png" />
+    <Content Include="js\jsPDF-master\examples\images\jpg.jpg" />
+    <Content Include="js\jsPDF-master\examples\images\png8_flat.png" />
+    <Content Include="js\jsPDF-master\examples\images\png8_trans.png" />
+    <Content Include="js\jsPDF-master\examples\images\RGBA_16bpc.png" />
+    <Content Include="js\jsPDF-master\examples\images\RGB_16bpc.png" />
+    <Content Include="js\jsPDF-master\examples\images\tiny_png_indexed.png" />
+    <Content Include="js\jsPDF-master\examples\jaxer.html" />
+    <Content Include="js\jsPDF-master\examples\jspdf.PLUGINTEMPLATE.js" />
+    <Content Include="js\jsPDF-master\examples\js\AcroForm.js" />
+    <Content Include="js\jsPDF-master\examples\js\basic.js" />
+    <Content Include="js\jsPDF-master\examples\js\circles.js" />
+    <Content Include="js\jsPDF-master\examples\js\editor.js" />
+    <Content Include="js\jsPDF-master\examples\js\font-faces.js" />
+    <Content Include="js\jsPDF-master\examples\js\font-size.js" />
+    <Content Include="js\jsPDF-master\examples\js\from-html.js" />
+    <Content Include="js\jsPDF-master\examples\js\html2canvas.js" />
+    <Content Include="js\jsPDF-master\examples\js\images.js" />
+    <Content Include="js\jsPDF-master\examples\js\jquery\jquery-1.7.1.min.js" />
+    <Content Include="js\jsPDF-master\examples\js\jquery\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="js\jsPDF-master\examples\js\kitchen-sink.js" />
+    <Content Include="js\jsPDF-master\examples\js\landscape.js" />
+    <Content Include="js\jsPDF-master\examples\js\lines.js" />
+    <Content Include="js\jsPDF-master\examples\js\rectangles.js" />
+    <Content Include="js\jsPDF-master\examples\js\string-splitting.js" />
+    <Content Include="js\jsPDF-master\examples\js\test_harness.js" />
+    <Content Include="js\jsPDF-master\examples\js\text-colors.js" />
+    <Content Include="js\jsPDF-master\examples\js\theme-ambiance.js" />
+    <Content Include="js\jsPDF-master\examples\js\triangles.js" />
+    <Content Include="js\jsPDF-master\examples\js\two-page.js" />
+    <Content Include="js\jsPDF-master\examples\js\user-input.js" />
+    <Content Include="js\jsPDF-master\examples\null-logo-trans.png" />
+    <Content Include="js\jsPDF-master\examples\octocat.jpg" />
+    <Content Include="js\jsPDF-master\examples\octocat.png" />
+    <Content Include="js\jsPDF-master\examples\outline\test_outline.html" />
+    <Content Include="js\jsPDF-master\examples\runner.html" />
+    <Content Include="js\jsPDF-master\examples\test_from_html.html" />
+    <Content Include="js\jsPDF-master\examples\test_from_html_css_page_breaks.html" />
+    <Content Include="js\jsPDF-master\examples\test_insert_page.html" />
+    <Content Include="js\jsPDF-master\examples\thinking-monkey.jpg" />
+    <Content Include="js\jsPDF-master\index.html" />
+    <Content Include="js\jsPDF-master\jspdf.js" />
+    <Content Include="js\jsPDF-master\libs\css_colors.js" />
+    <Content Include="js\jsPDF-master\libs\deflate.js" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\images\download.png" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\js\downloadify.min.js" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\js\swfobject.js" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\LICENSE.txt" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\media\downloadify.swf" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\src\downloadify.js" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\test.html" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\dist\html2canvas.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\core.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\dummyimagecontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\fallback.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\font.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\fontmetrics.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\framecontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\gradientcontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\imagecontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\imageloader.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\lineargradientcontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\log.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\nodecontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\nodeparser.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\promise.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\proxy.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\proxyimagecontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\pseudoelementcontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\renderer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\renderers\canvas.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\stackingcontext.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\support.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\svgcontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\svgnodecontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\textcontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\webkitgradientcontainer.js" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\src\xhr.js" />
+    <Content Include="js\jsPDF-master\libs\html2pdf.js" />
+    <Content Include="js\jsPDF-master\libs\png_support\png.js" />
+    <Content Include="js\jsPDF-master\libs\png_support\zlib.js" />
+    <Content Include="js\jsPDF-master\libs\polyfill.js" />
+    <Content Include="js\jsPDF-master\libs\require\config.js" />
+    <Content Include="js\jsPDF-master\libs\require\require.js" />
+    <Content Include="js\jsPDF-master\main.js" />
+    <Content Include="js\jsPDF-master\MIT-LICENSE.txt" />
+    <Content Include="js\jsPDF-master\plugins\acroform.js" />
+    <Content Include="js\jsPDF-master\plugins\addhtml.js" />
+    <Content Include="js\jsPDF-master\plugins\addimage.js" />
+    <Content Include="js\jsPDF-master\plugins\annotations.js" />
+    <Content Include="js\jsPDF-master\plugins\autoprint.js" />
+    <Content Include="js\jsPDF-master\plugins\canvas.js" />
+    <Content Include="js\jsPDF-master\plugins\cell.js" />
+    <Content Include="js\jsPDF-master\plugins\context2d.js" />
+    <Content Include="js\jsPDF-master\plugins\from_html.js" />
+    <Content Include="js\jsPDF-master\plugins\javascript.js" />
+    <Content Include="js\jsPDF-master\plugins\outline.js" />
+    <Content Include="js\jsPDF-master\plugins\png_support.js" />
+    <Content Include="js\jsPDF-master\plugins\prevent_scale_to_fit.js" />
+    <Content Include="js\jsPDF-master\plugins\split_text_to_size.js" />
+    <Content Include="js\jsPDF-master\plugins\standard_fonts_metrics.js" />
+    <Content Include="js\jsPDF-master\plugins\svg.js" />
+    <Content Include="js\jsPDF-master\plugins\total_pages.js" />
+    <Content Include="js\jsPDF-master\plugins\xmp_metadata.js" />
+    <Content Include="js\jsPDF-master\test\013_sillysvgrenderer.svg" />
+    <Content Include="js\jsPDF-master\test\014_addImage.jpeg" />
+    <Content Include="js\jsPDF-master\test\014_addImage.jpeg.base64.txt" />
+    <Content Include="js\jsPDF-master\test\014_addImage.pdf.base64.txt" />
+    <Content Include="js\jsPDF-master\test\014_addImage.txt" />
+    <Content Include="js\jsPDF-master\test\015_splittext.js" />
+    <Content Include="js\jsPDF-master\test\components_tests.js" />
+    <Content Include="js\jsPDF-master\test\index.htm" />
+    <Content Include="js\jsPDF-master\test\libs\curl-0.5.4.min.js" />
+    <Content Include="js\jsPDF-master\test\libs\custom_fill.js" />
+    <Content Include="js\jsPDF-master\test\libs\qunit.css" />
+    <Content Include="js\jsPDF-master\test\libs\qunit.js" />
+    <Content Include="js\jsPDF-master\test\pdf_generate_tests.js" />
+    <Content Include="js\jsPDF-master\test\test.html" />
+    <Content Include="js\jsPDF-master\test\test_from_html_css_page_breaks.html" />
+    <Content Include="js\jsPDF-master\test\test_harness.js" />
+    <Content Include="js\jsPDF-master\test\test_min.html" />
+    <Content Include="js\jsPDF-master\todo.txt" />
+    <Content Include="js\ms-Dropdown-master\css\msdropdown\dd.css" />
+    <Content Include="js\ms-Dropdown-master\css\msdropdown\flags.css" />
+    <Content Include="js\ms-Dropdown-master\css\msdropdown\skin2.css" />
+    <Content Include="js\ms-Dropdown-master\css\msdropdown\sprite.css" />
+    <Content Include="js\ms-Dropdown-master\examples\byjson.html" />
+    <Content Include="js\ms-Dropdown-master\examples\css-sprite.html" />
+    <Content Include="js\ms-Dropdown-master\examples\css\sample.css" />
+    <Content Include="js\ms-Dropdown-master\examples\help.html" />
+    <Content Include="js\ms-Dropdown-master\examples\index.html" />
+    <Content Include="js\ms-Dropdown-master\examples\mouse-events.html" />
+    <Content Include="js\ms-Dropdown-master\examples\multiple-skin.html" />
+    <Content Include="js\ms-Dropdown-master\examples\object-oriented-approach-more.html" />
+    <Content Include="js\ms-Dropdown-master\examples\object-oriented-approach.html" />
+    <Content Include="js\ms-Dropdown-master\examples\use-checkbox.html" />
+    <Content Include="js\ms-Dropdown-master\GPL-LICENSE.txt" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\1273404841_tick_16.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Amex-56.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\blank.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\browser-chrome.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\browser-firefox.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\browser-msie.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\browser-opera.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\browser-safari.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\button-large.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Cash-56.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\demoaction.jpg" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Discover-56.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\enabled.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\flagssprite_small.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\giftlelo_dot_com.jpg" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon-search.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_calendar.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_cart.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_cd.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_email.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_faq.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_games.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_lockopen.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_music.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_phone.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_sales.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_secure.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\icon_video.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\jquery-msdropdown.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Mastercard-56.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\msDropDown.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Paypal-56.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\preview.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\sprite.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\sprite.jpg" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\tick.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Visa-56.png" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\skin1\dd_arrow.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\skin1\title-bg.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\skin2\dd_arrow.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\skin2\icon-ok.gif" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\skin2\title-bg.gif" />
+    <Content Include="js\ms-Dropdown-master\index.html" />
+    <Content Include="js\ms-Dropdown-master\js\jquery\jquery-1.9.0.min.js" />
+    <Content Include="js\ms-Dropdown-master\js\jquery\tester.js" />
+    <Content Include="js\ms-Dropdown-master\js\msdropdown\jquery.dd.js" />
+    <Content Include="js\ms-Dropdown-master\js\msdropdown\jquery.dd.min.js" />
+    <Content Include="js\ms-Dropdown-master\MIT-LICENSE.txt" />
+    <Content Include="js\ms-Dropdown-master\Readme.txt" />
+    <Content Include="js\sylvester.js" />
+    <Content Include="js\sylvester.src.js" />
+    <Content Include="js\UploadSVG.js" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\instagram-256.png" />
+    <Content Include="js\fabric.js-1.5.0\.bithoundrc" />
+    <Content Include="js\fabric.js-1.5.0\.editorconfig" />
+    <Content Include="js\fabric.js-1.5.0\.gitignore" />
+    <Content Include="js\fabric.js-1.5.0\.jscs.json" />
+    <Content Include="js\fabric.js-1.5.0\.jshintrc" />
+    <Content Include="js\fabric.js-1.5.0\.npmignore" />
+    <Content Include="js\fabric.js-1.5.0\.travis.yml" />
+    <Content Include="js\fabric.js-1.5.0\bower.json" />
+    <Content Include="js\fabric.js-1.5.0\build.sh" />
+    <Content Include="js\fabric.js-1.5.0\build_all" />
+    <Content Include="js\fabric.js-1.5.0\CHANGELOG.md" />
+    <Content Include="js\fabric.js-1.5.0\CONTRIBUTING.md" />
+    <Content Include="js\fabric.js-1.5.0\dist\fabric.min.js.gz" />
+    <Content Include="js\fabric.js-1.5.0\lib\excanvas-diff.patch" />
+    <Content Include="js\fabric.js-1.5.0\lib\excanvas.js.orig" />
+    <Content Include="js\fabric.js-1.5.0\LICENSE" />
+    <Content Include="js\fabric.js-1.5.0\package.json" />
+    <Content Include="js\fabric.js-1.5.0\README.md" />
+    <Content Include="js\jsPDF-master\.gitignore" />
+    <Content Include="js\jsPDF-master\bower.json" />
+    <Content Include="js\jsPDF-master\bower.json.bak" />
+    <Content Include="js\jsPDF-master\build.sh" />
+    <Content Include="js\jsPDF-master\CNAME" />
+    <Content Include="js\jsPDF-master\docs\getting_started.md" />
+    <Content Include="js\jsPDF-master\doc\plugins\from_html.md" />
+    <Content Include="js\jsPDF-master\examples\annotation\test_annotation-magFactor.pdf" />
+    <Content Include="js\jsPDF-master\examples\annotation\test_annotation.pdf" />
+    <Content Include="js\jsPDF-master\examples\outline\test_outline.pdf" />
+    <Content Include="js\jsPDF-master\ISSUE_TEMPLATE.md" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\README.textile" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\src\com\dynamicflash\util\Base64.as" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\src\com\dynamicflash\util\tests\Base64Test.as" />
+    <Content Include="js\jsPDF-master\libs\Downloadify\src\Downloadify.as" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\LICENSE" />
+    <Content Include="js\jsPDF-master\libs\html2canvas\readme.md" />
+    <Content Include="js\jsPDF-master\libs\README" />
+    <Content Include="js\jsPDF-master\package.json" />
+    <Content Include="js\jsPDF-master\README.md" />
+    <Content Include="js\jsPDF-master\SUMMARY.md" />
+    <Content Include="js\jsPDF-master\test\001_blankpdf.pdf" />
+    <Content Include="js\jsPDF-master\test\002_twopagedoc.pdf" />
+    <Content Include="js\jsPDF-master\test\002_twopagedoc_oldapi.pdf" />
+    <Content Include="js\jsPDF-master\test\003_demolandscape.pdf" />
+    <Content Include="js\jsPDF-master\test\004_fontsizes.pdf" />
+    <Content Include="js\jsPDF-master\test\005_demofonttypes.pdf" />
+    <Content Include="js\jsPDF-master\test\006_demotestcolors.pdf" />
+    <Content Include="js\jsPDF-master\test\007_demometadata.pdf" />
+    <Content Include="js\jsPDF-master\test\008_demorectangles.pdf" />
+    <Content Include="js\jsPDF-master\test\009_demoliness.pdf" />
+    <Content Include="js\jsPDF-master\test\010_democircles.pdf" />
+    <Content Include="js\jsPDF-master\test\011_multilinetext.pdf" />
+    <Content Include="js\jsPDF-master\test\012_multiplelines.pdf" />
+    <Content Include="js\jsPDF-master\test\013_sillysvgrenderer.pdf" />
+    <Content Include="js\jsPDF-master\test\015_splittext.pdf" />
+    <Content Include="js\ms-Dropdown-master\bower.json" />
+    <Content Include="js\ms-Dropdown-master\examples\submitdata.php" />
+    <Content Include="js\ms-Dropdown-master\images\msdropdown\icons\Thumbs.db" />
+    <Content Include="js\ms-Dropdown-master\Readme.md" />
+    <Content Include="Content\font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome-4.6.3\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\font-awesome-4.6.3\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome-4.6.3\less\animated.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\bordered-pulled.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\core.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\fixed-width.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\font-awesome.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\icons.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\larger.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\list.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\mixins.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\path.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\rotated-flipped.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\screen-reader.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\stacked.less" />
+    <Content Include="Content\font-awesome-4.6.3\less\variables.less" />
+    <Content Include="Content\font-awesome-4.6.3\scss\font-awesome.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_animated.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_bordered-pulled.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_core.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_fixed-width.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_icons.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_larger.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_list.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_mixins.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_path.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_rotated-flipped.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_screen-reader.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_stacked.scss" />
+    <Content Include="Content\font-awesome-4.6.3\scss\_variables.scss" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\.gitignore" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\bower.json" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\LICENSE" />
+    <Content Include="js\davidshimjs-qrcodejs-04f46c6\README.md" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\Default Settings %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\s.pubxml" />
+    <Content Include="Scripts\fabric.js-1.5.0\.bithoundrc" />
+    <Content Include="Scripts\fabric.js-1.5.0\.editorconfig" />
+    <Content Include="Scripts\fabric.js-1.5.0\.gitignore" />
+    <Content Include="Scripts\fabric.js-1.5.0\.jscs.json" />
+    <Content Include="Scripts\fabric.js-1.5.0\.jshintrc" />
+    <Content Include="Scripts\fabric.js-1.5.0\.npmignore" />
+    <Content Include="Scripts\fabric.js-1.5.0\.travis.yml" />
+    <Content Include="Scripts\fabric.js-1.5.0\bower.json" />
+    <Content Include="Scripts\fabric.js-1.5.0\build.sh" />
+    <Content Include="Scripts\fabric.js-1.5.0\build_all" />
+    <Content Include="Scripts\fabric.js-1.5.0\CHANGELOG.md" />
+    <Content Include="Scripts\fabric.js-1.5.0\CONTRIBUTING.md" />
+    <Content Include="Scripts\fabric.js-1.5.0\dist\fabric.min.js.gz" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\excanvas-diff.patch" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\excanvas.js.orig" />
+    <Content Include="Scripts\fabric.js-1.5.0\LICENSE" />
+    <Content Include="Scripts\fabric.js-1.5.0\package.json" />
+    <Content Include="Scripts\fabric.js-1.5.0\README.md" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\build.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\create_build_script.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\dist\fabric.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\dist\fabric.min.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\dist\fabric.require.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\HEADER.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\aligning_guidelines.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\centering_guidelines.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\cufon.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\event.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\excanvas.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\google_closure_compiler.jar" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\json2.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\screenshot.png" />
+    <Content Include="Scripts\fabric.js-1.5.0\lib\yuicompressor-2.4.6.jar" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\amd\requirejs.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\brushes\base_brush.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\brushes\circle_brush.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\brushes\pattern_brush.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\brushes\pencil_brush.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\brushes\spray_brush.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\canvas.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\color.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\elements_parser.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\base_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\blend_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\brightness_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\convolute_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\gradienttransparency_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\grayscale_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\invert_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\mask_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\multiply_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\noise_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\pixelate_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\removewhite_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\resize_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\sepia2_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\sepia_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\filters\tint_filter.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\gradient.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\intersection.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\log.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\animation.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\canvas_dataurl_exporter.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\canvas_events.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\canvas_gestures.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\canvas_grouping.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\canvas_serialization.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\collection.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\itext.svg_export.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\itext_behavior.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\itext_click_behavior.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\itext_key_behavior.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\object.svg_export.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\object_geometry.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\object_interactivity.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\object_origin.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\object_stacking.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\object_straightening.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\observable.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\mixins\stateful.mixin.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\node.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\parser.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\pattern.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\point.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shadow.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\circle.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\ellipse.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\group.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\image.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\itext.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\line.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\object.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\path.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\path_group.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\polygon.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\polyline.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\rect.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\text.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\shapes\triangle.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\static_canvas.class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\animate.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\anim_ease.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\arc.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\dom_event.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\dom_misc.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\dom_request.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\dom_style.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\lang_array.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\lang_class.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\lang_function.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\lang_object.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\lang_string.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\src\util\misc.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\car.svg" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\greyfloral.png" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\path.svg" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\svg_with_rect.svg" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\test_image.gif" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\test_script.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\fixtures\very_large_image.jpg" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\lib\canvas_assertions.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\lib\event.simulate.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\lib\qunit.css" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\lib\qunit.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\canvas.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\canvas_static.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\circle.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\color.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\ellipse.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\gradient.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\group.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\image.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\image_filters.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\itext.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\line.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\object.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\object_interactivity.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\observable.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\parser.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\path.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\path_group.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\pattern.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\polygon.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\polyline.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\rect.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\shadow.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\text.js" />
+    <Content Include="Scripts\fabric.js-1.5.0\test\unit\util.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\AddNewUserRole.cshtml" />
+    <Content Include="Views\Home\Apply.cshtml" />
+    <Content Include="Views\Home\SetCanvas.cshtml" />
+    <Content Include="Views\Home\UserRoleList.cshtml" />
+    <Content Include="Views\Home\Users.cshtml" />
+    <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\Home\Manager.cshtml" />
+    <Content Include="Views\Home\UserList.cshtml" />
+    <Content Include="Views\Home\UserInfo.cshtml" />
+    <Content Include="Views\Home\EditLayout.cshtml" />
+    <Content Include="Views\materials\Create.cshtml" />
+    <Content Include="Views\materials\Delete.cshtml" />
+    <Content Include="Views\materials\Details.cshtml" />
+    <Content Include="Views\materials\Edit.cshtml" />
+    <Content Include="Views\materials\Index.cshtml" />
+    <Content Include="Views\AspNetRoles\Create.cshtml" />
+    <Content Include="Views\AspNetRoles\Delete.cshtml" />
+    <Content Include="Views\AspNetRoles\Details.cshtml" />
+    <Content Include="Views\AspNetRoles\Edit.cshtml" />
+    <Content Include="Views\AspNetRoles\Index.cshtml" />
+    <Content Include="Views\cards\GroupedCards.cshtml" />
+    <Content Include="Views\layouts\Create.cshtml" />
+    <Content Include="Views\layouts\Delete.cshtml" />
+    <Content Include="Views\layouts\Details.cshtml" />
+    <Content Include="Views\layouts\Edit.cshtml" />
+    <Content Include="Views\layouts\Index.cshtml" />
+    <Content Include="Views\Home\ItemTypes.cshtml" />
+    <Content Include="Views\Home\ItemLayouts.cshtml">
+      <BrowseToURL>~/Home/ItemLayouts</BrowseToURL>
+    </Content>
+    <Content Include="Views\cards\Create.cshtml" />
+    <Content Include="Views\cards\Delete.cshtml" />
+    <Content Include="Views\cards\Details.cshtml" />
+    <Content Include="Views\cards\Edit.cshtml" />
+    <Content Include="Views\cards\Index.cshtml" />
+    <Content Include="Views\COUNTs\Create.cshtml" />
+    <Content Include="Views\COUNTs\Delete.cshtml" />
+    <Content Include="Views\COUNTs\Details.cshtml" />
+    <Content Include="Views\COUNTs\Edit.cshtml" />
+    <Content Include="Views\COUNTs\Index.cshtml" />
+    <Content Include="Views\cards2\Create.cshtml" />
+    <Content Include="Views\cards2\Delete.cshtml" />
+    <Content Include="Views\cards2\Details.cshtml" />
+    <Content Include="Views\cards2\Edit.cshtml" />
+    <Content Include="Views\cards2\Index.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\Create.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\Delete.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\Details.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\Edit.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\Index.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\getItemTypes.cshtml" />
+    <Content Include="Views\Home\exSearch.cshtml" />
+    <Content Include="Views\applications\Create.cshtml" />
+    <Content Include="Views\applications\Delete.cshtml" />
+    <Content Include="Views\applications\Details.cshtml" />
+    <Content Include="Views\applications\Edit.cshtml" />
+    <Content Include="Views\applications\Index.cshtml" />
+    <Content Include="Views\addCards\chooseItemType.cshtml" />
+    <Content Include="Views\addCards\Create.cshtml" />
+    <Content Include="Views\addCards\Delete.cshtml" />
+    <Content Include="Views\addCards\Details.cshtml" />
+    <Content Include="Views\addCards\Edit.cshtml" />
+    <Content Include="Views\addCards\Index.cshtml" />
+    <Content Include="Views\ITEM_TYPE\Create.cshtml" />
+    <Content Include="Views\ITEM_TYPE\Delete.cshtml" />
+    <Content Include="Views\ITEM_TYPE\Details.cshtml" />
+    <Content Include="Views\ITEM_TYPE\Edit.cshtml" />
+    <Content Include="Views\ITEM_TYPE\Index.cshtml" />
+    <Content Include="Views\AspNetUsers\Create.cshtml" />
+    <Content Include="Views\AspNetUsers\Delete.cshtml" />
+    <Content Include="Views\AspNetUsers\Details.cshtml" />
+    <Content Include="Views\AspNetUsers\Edit.cshtml" />
+    <Content Include="Views\AspNetUsers\Index.cshtml" />
+    <Content Include="Views\CARD_CLAIMS\groupedClaims.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Home\YandexPayment.cshtml" />
+    <Content Include="Views\cards\ManagerCards.cshtml" />
+    <Content Include="Views\elements\Create.cshtml" />
+    <Content Include="Views\elements\Delete.cshtml" />
+    <Content Include="Views\elements\Details.cshtml" />
+    <Content Include="Views\elements\Edit.cshtml" />
+    <Content Include="Views\elements\Index.cshtml" />
+    <Content Include="Views\ELEMENTS_TYPES\Create.cshtml" />
+    <Content Include="Views\ELEMENTS_TYPES\Delete.cshtml" />
+    <Content Include="Views\ELEMENTS_TYPES\Details.cshtml" />
+    <Content Include="Views\ELEMENTS_TYPES\Edit.cshtml" />
+    <Content Include="Views\ELEMENTS_TYPES\Index.cshtml" />
+    <Content Include="Views\Home\AllNewCard.cshtml" />
+    <Content Include="Views\Towns\Create.cshtml" />
+    <Content Include="Views\Towns\Delete.cshtml" />
+    <Content Include="Views\Towns\Details.cshtml" />
+    <Content Include="Views\Towns\Edit.cshtml" />
+    <Content Include="Views\Towns\Index.cshtml" />
+    <Content Include="Views\Deliveries\Create.cshtml" />
+    <Content Include="Views\Deliveries\Delete.cshtml" />
+    <Content Include="Views\Deliveries\Details.cshtml" />
+    <Content Include="Views\Deliveries\Edit.cshtml" />
+    <Content Include="Views\Deliveries\Index.cshtml" />
+    <Content Include="Views\Shared\DetailsPartial.cshtml" />
+    <Content Include="Views\Shared\View.cshtml" />
+    <Content Include="Views\favorites\Create.cshtml" />
+    <Content Include="Views\favorites\Delete.cshtml" />
+    <Content Include="Views\favorites\Details.cshtml" />
+    <Content Include="Views\favorites\Edit.cshtml" />
+    <Content Include="Views\favorites\Index.cshtml" />
+    <Content Include="Views\favorites\MyFavorite.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
+    <Content Include="Views\Shared\Cards.cshtml" />
+    <Content Include="Views\applications\_AppItems.cshtml" />
+    <Content Include="Views\applications\_ManagerApp.cshtml" />
+    <Content Include="Views\applications\ManagerApplicationList.cshtml" />
+    <Content Include="Views\applications\UserApplicationList.cshtml" />
+    <Content Include="Views\cards\UserCardsList.cshtml" />
+    <Content Include="Views\Home\ApplyCheck.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\PaymentSubmit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\ITEM_TYPES\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201512180906537_user.resx">
+      <DependentUpon>201512180906537_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512181042171_us.resx">
+      <DependentUpon>201512181042171_us.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3714</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44303/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,58 @@
+﻿@model WebApplication9.Models.CARD_CLAIMS
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CARD_CLAIMS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaimType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaimValue)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.cards.text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.text)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.published)
+        </dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

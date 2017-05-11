@@ -1,0 +1,151 @@
+﻿@model WebApplication9.Models.application
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/Canvas.css")
+@Scripts.Render("~/scripts/jquery-1.10.2.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@Scripts.Render("~/js/ApplyProcess.js")
+@Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+@Styles.Render("~/Content/Loading")
+
+@*<div id="loading">
+    <img id="loading-image" src="~/files/ripple.gif" alt="loading..." />
+</div>*@
+
+<h2>Заявка</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+          @Html.HiddenFor(model => model.vc_id)
+            <div class="col-md-12">
+                @*<label>Image File:</label><br />
+                    <input type="file" id="imageLoader" name="imageLoader" />*@
+                <div with="500" height="500">
+                    <input type="hidden" id="cardId" value="@ViewBag.EditLayoutId" />
+                    @*@Html.HiddenFor(model => model.cards.image, new { id = "hiddenImage" })
+                    @Html.HiddenFor(model => model.cards.image_side_2, new { id = "hiddenImage_s2" })*@
+                    <input type="hidden" id="hiddenWidth" class="hiddenWidth" value="@Html.DisplayFor(model => model.cards.layout.width)" />
+                    <input type="hidden" id="hiddenHeight" class="hiddenHeight" value="@Html.DisplayFor(model => model.cards.layout.height)" />
+                    
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img src="@Html.DisplayFor(model => model.cards.preview)" />
+                            </div>
+                            <div class="col-xs-6">
+                                @if (Model.cards.preview_2 != null)
+                                {
+                                <img src="@Html.DisplayFor(model => model.cards.preview_2)" />
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.COUNT, "count_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.count_id, (SelectList)ViewBag.count_id, new { id = "ddl1" })
+                @Html.ValidationMessageFor(model => model.count_id)
+            </div>
+        </div>
+
+  
+        <div class="form-group">
+            @Html.Label("Доставка")
+            <div class="col-md-10">
+                @Html.CheckBox("Доставка", false, new { id = "deliveryChk" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Delivery.Town_id, "Город", htmlAttributes: new { @class = "control-label col-md-2 delivery hidden" })
+            <div class="col-md-10 delivery hidden">
+                @Html.DropDownListFor(model => model.Delivery.Town_id, (SelectList)ViewBag.towns, new { id = "townDdl" })
+                @Html.ValidationMessageFor(model => model.Delivery.Town_id)
+            </div>
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Delivery.Street, htmlAttributes: new { @class = "control-label col-md-2 delivery hidden" })
+            <div class="col-md-10 delivery hidden">
+                @Html.EditorFor(model => model.Delivery.Street, "Default")
+                @Html.ValidationMessageFor(model => model.Delivery.Street)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Delivery.House, htmlAttributes: new { @class = "control-label col-md-2 delivery hidden" })
+            <div class="col-md-10 delivery hidden">
+                @Html.EditorFor(model => model.Delivery.House, "Default")
+                @Html.ValidationMessageFor(model => model.Delivery.House)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Delivery.Apartment, htmlAttributes: new { @class = "control-label col-md-2 delivery hidden" })
+            <div class="col-md-10 delivery hidden">
+                @Html.EditorFor(model => model.Delivery.Apartment, "Default")
+                @Html.ValidationMessageFor(model => model.Delivery.Apartment)
+            </div>
+        </div>
+
+        @*Материал*@
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.app.material_id, "material_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.app.material_id, (SelectList)ViewBag.material_id, new { id = "ddl2" })
+                @Html.ValidationMessageFor(model => model.app.material_id)
+            </div>
+        </div>*@
+
+        @*Сумма*@
+        @*<div class="form-group">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.app.summ)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.app.summ, new { id = "resultPrice", @readonly = true })
+                @Html.ValidationMessageFor(model => model.app.summ)
+            </div>
+            <a href="#" id="processPrice">Рассчитать</a>
+            </div>*@
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" id="subm" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+@*<script language="javascript" type="text/javascript">
+     $(window).load(function() {
+     $('#loading').hide();
+  });
+</script>*@
+
+
+
+
+
+

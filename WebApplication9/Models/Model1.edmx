@@ -1,0 +1,1377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="application">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vc_id" Type="int" />
+          <Property Name="user_id" Type="nvarchar" MaxLength="128" />
+          <Property Name="insertionDate" Type="datetime" />
+          <Property Name="finishDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="50" />
+          <Property Name="count_id" Type="int" />
+          <Property Name="summ" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="material_id" Type="int" />
+          <Property Name="sender" Type="nvarchar(max)" />
+          <Property Name="operation_id" Type="nvarchar(max)" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="withdrawamount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Delivery_id" Type="int" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+          <Property Name="User_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="ConfirmedEmail" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARD_CLAIMS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClaimValue" Type="nvarchar" MaxLength="50" />
+          <Property Name="Card_id" Type="int" />
+          <Property Name="published" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cards">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Images_id" Type="int" Nullable="false" />
+          <Property Name="layout_id" Type="int" />
+          <Property Name="text" Type="nvarchar" MaxLength="50" />
+          <Property Name="preview" Type="nvarchar" MaxLength="200" />
+          <Property Name="USER_ID" Type="nvarchar" MaxLength="128" />
+          <Property Name="published" Type="bit" Nullable="false" />
+          <Property Name="ITEM_TYPE_ID" Type="int" />
+          <Property Name="preview_2" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="COUNT">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ITEM_TYPE_ID" Type="int" />
+          <Property Name="COUNT_VALUE" Type="int" />
+          <Property Name="PRICE" Type="decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Town_id" Type="int" Nullable="false" />
+          <Property Name="Street" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="House" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Apartment" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="elements">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="type_name_id" Type="int" Nullable="false" />
+          <Property Name="item_type_id" Type="int" Nullable="false" />
+          <Property Name="item_layout_id" Type="int" />
+        </EntityType>
+        <EntityType Name="ELEMENTS_TYPES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TYPE_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="favorite">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="card_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IMAGES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Image_2" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ITEM_TYPE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="layout">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ITEM_TYPE_ID" Type="int" />
+          <Property Name="width" Type="nchar" MaxLength="10" />
+          <Property Name="height" Type="nchar" MaxLength="10" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="materials">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="price" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="count" Type="int" />
+        </EntityType>
+        <EntityType Name="Towns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="card_id">
+          <End Role="cards" Type="Self.cards" Multiplicity="1" />
+          <End Role="favorite" Type="Self.favorite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cards">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="favorite">
+              <PropertyRef Name="card_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__count">
+          <End Role="COUNT" Type="Self.COUNT" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COUNT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="count_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__material">
+          <End Role="materials" Type="Self.materials" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="materials">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="material_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__user">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__vc_id">
+          <End Role="cards" Type="Self.cards" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cards">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="vc_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application_Delivery">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="Delivery_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__Towns">
+          <End Role="Towns" Type="Self.Towns" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Towns">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="Town_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__elements__ELEMENTS_TYPES">
+          <End Role="ELEMENTS_TYPES" Type="Self.ELEMENTS_TYPES" Multiplicity="1" />
+          <End Role="elements" Type="Self.elements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ELEMENTS_TYPES">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="elements">
+              <PropertyRef Name="type_name_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__elements__ITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="1" />
+          <End Role="elements" Type="Self.elements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="elements">
+              <PropertyRef Name="item_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__elements__layout">
+          <End Role="layout" Type="Self.layout" Multiplicity="0..1" />
+          <End Role="elements" Type="Self.elements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layout">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="elements">
+              <PropertyRef Name="item_layout_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUserRoles_AspNetRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUserRoles_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARD_CLAIMS_tocards">
+          <End Role="cards" Type="Self.cards" Multiplicity="0..1" />
+          <End Role="CARD_CLAIMS" Type="Self.CARD_CLAIMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cards">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CARD_CLAIMS">
+              <PropertyRef Name="Card_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_toImages">
+          <End Role="IMAGES" Type="Self.IMAGES" Multiplicity="1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IMAGES">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="Images_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_toITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="0..1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="ITEM_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_ToLayout">
+          <End Role="layout" Type="Self.layout" Multiplicity="0..1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layout">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="layout_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_toUser">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_count_toCard_ITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="0..1" />
+          <End Role="COUNT" Type="Self.COUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COUNT">
+              <PropertyRef Name="ITEM_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_layout_toCard_ITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="0..1" />
+          <End Role="layout" Type="Self.layout" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="layout">
+              <PropertyRef Name="ITEM_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_id">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="favorite" Type="Self.favorite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="favorite">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="application" EntityType="Self.application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARD_CLAIMS" EntityType="Self.CARD_CLAIMS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cards" EntityType="Self.cards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COUNT" EntityType="Self.COUNT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="elements" EntityType="Self.elements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ELEMENTS_TYPES" EntityType="Self.ELEMENTS_TYPES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="favorite" EntityType="Self.favorite" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IMAGES" EntityType="Self.IMAGES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITEM_TYPE" EntityType="Self.ITEM_TYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="layout" EntityType="Self.layout" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="materials" EntityType="Self.materials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Towns" EntityType="Self.Towns" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="card_id" Association="Self.card_id">
+            <End Role="cards" EntitySet="cards" />
+            <End Role="favorite" EntitySet="favorite" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__count" Association="Self.FK__application__count">
+            <End Role="COUNT" EntitySet="COUNT" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__material" Association="Self.FK__application__material">
+            <End Role="materials" EntitySet="materials" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__user" Association="Self.FK__application__user">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__vc_id" Association="Self.FK__application__vc_id">
+            <End Role="cards" EntitySet="cards" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application_Delivery" Association="Self.FK__application_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__Towns" Association="Self.FK__Delivery__Towns">
+            <End Role="Towns" EntitySet="Towns" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK__elements__ELEMENTS_TYPES" Association="Self.FK__elements__ELEMENTS_TYPES">
+            <End Role="ELEMENTS_TYPES" EntitySet="ELEMENTS_TYPES" />
+            <End Role="elements" EntitySet="elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__elements__ITEM_TYPE" Association="Self.FK__elements__ITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="elements" EntitySet="elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__elements__layout" Association="Self.FK__elements__layout">
+            <End Role="layout" EntitySet="layout" />
+            <End Role="elements" EntitySet="elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserRoles_AspNetRoles" Association="Self.FK_AspNetUserRoles_AspNetRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="Self.FK_AspNetUserRoles_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARD_CLAIMS_tocards" Association="Self.FK_CARD_CLAIMS_tocards">
+            <End Role="cards" EntitySet="cards" />
+            <End Role="CARD_CLAIMS" EntitySet="CARD_CLAIMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_toImages" Association="Self.FK_cards_toImages">
+            <End Role="IMAGES" EntitySet="IMAGES" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_toITEM_TYPE" Association="Self.FK_cards_toITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_ToLayout" Association="Self.FK_cards_ToLayout">
+            <End Role="layout" EntitySet="layout" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_toUser" Association="Self.FK_cards_toUser">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_count_toCard_ITEM_TYPE" Association="Self.FK_count_toCard_ITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="COUNT" EntitySet="COUNT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_layout_toCard_ITEM_TYPE" Association="Self.FK_layout_toCard_ITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="layout" EntitySet="layout" />
+          </AssociationSet>
+          <AssociationSet Name="user_id" Association="Self.user_id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="favorite" EntitySet="favorite" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="application">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vc_id" Type="Int32" />
+          <Property Name="user_id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="insertionDate" Type="DateTime" Precision="3" />
+          <Property Name="finishDate" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="count_id" Type="Int32" />
+          <Property Name="summ" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="material_id" Type="Int32" />
+          <Property Name="sender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="operation_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="withdrawamount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Delivery_id" Type="Int32" />
+          <NavigationProperty Name="COUNT" Relationship="Self.FK__application__count" FromRole="application" ToRole="COUNT" />
+          <NavigationProperty Name="materials" Relationship="Self.FK__application__material" FromRole="application" ToRole="materials" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK__application__user" FromRole="application" ToRole="AspNetUsers" />
+          <NavigationProperty Name="cards" Relationship="Self.FK__application__vc_id" FromRole="application" ToRole="cards" />
+          <NavigationProperty Name="Delivery" Relationship="Self.FK__application_Delivery" FromRole="application" ToRole="Delivery" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="User_Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+          </Key>
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Discriminator" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConfirmedEmail" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="application" Relationship="Self.FK__application__user" FromRole="AspNetUsers" ToRole="application" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="cards" Relationship="Self.FK_cards_toUser" FromRole="AspNetUsers" ToRole="cards" />
+          <NavigationProperty Name="favorite" Relationship="Self.user_id" FromRole="AspNetUsers" ToRole="favorite" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="CARD_CLAIMS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Card_id" Type="Int32" />
+          <Property Name="published" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="cards" Relationship="Self.FK_CARD_CLAIMS_tocards" FromRole="CARD_CLAIMS" ToRole="cards" />
+        </EntityType>
+        <EntityType Name="cards">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="layout_id" Type="Int32" />
+          <Property Name="text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="preview" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="USER_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="published" Type="Boolean" Nullable="false" />
+          <Property Name="ITEM_TYPE_ID" Type="Int32" />
+          <Property Name="preview_2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="application" Relationship="Self.FK__application__vc_id" FromRole="cards" ToRole="application" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_cards_toUser" FromRole="cards" ToRole="AspNetUsers" />
+          <NavigationProperty Name="CARD_CLAIMS" Relationship="Self.FK_CARD_CLAIMS_tocards" FromRole="cards" ToRole="CARD_CLAIMS" />
+          <NavigationProperty Name="favorite" Relationship="Self.card_id" FromRole="cards" ToRole="favorite" />
+          <NavigationProperty Name="ITEM_TYPE" Relationship="Self.FK_cards_toITEM_TYPE" FromRole="cards" ToRole="ITEM_TYPE" />
+          <NavigationProperty Name="layout" Relationship="Self.FK_cards_ToLayout" FromRole="cards" ToRole="layout" />
+          <Property Name="Images_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="IMAGES" Relationship="Model.FK_cards_toImages" FromRole="cards" ToRole="IMAGES" />
+        </EntityType>
+        <EntityType Name="COUNT">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ITEM_TYPE_ID" Type="Int32" />
+          <Property Name="COUNT_VALUE" Type="Int32" />
+          <Property Name="PRICE" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="application" Relationship="Self.FK__application__count" FromRole="COUNT" ToRole="application" />
+          <NavigationProperty Name="ITEM_TYPE" Relationship="Self.FK_count_toCard_ITEM_TYPE" FromRole="COUNT" ToRole="ITEM_TYPE" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Town_id" Type="Int32" Nullable="false" />
+          <Property Name="Street" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="House" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apartment" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="application" Relationship="Self.FK__application_Delivery" FromRole="Delivery" ToRole="application" />
+          <NavigationProperty Name="Towns" Relationship="Self.FK__Delivery__Towns" FromRole="Delivery" ToRole="Towns" />
+        </EntityType>
+        <EntityType Name="elements">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type_name_id" Type="Int32" Nullable="false" />
+          <Property Name="item_type_id" Type="Int32" Nullable="false" />
+          <Property Name="item_layout_id" Type="Int32" />
+          <NavigationProperty Name="ELEMENTS_TYPES" Relationship="Self.FK__elements__ELEMENTS_TYPES" FromRole="elements" ToRole="ELEMENTS_TYPES" />
+          <NavigationProperty Name="ITEM_TYPE" Relationship="Self.FK__elements__ITEM_TYPE" FromRole="elements" ToRole="ITEM_TYPE" />
+          <NavigationProperty Name="layout" Relationship="Self.FK__elements__layout" FromRole="elements" ToRole="layout" />
+        </EntityType>
+        <EntityType Name="ELEMENTS_TYPES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TYPE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="elements" Relationship="Self.FK__elements__ELEMENTS_TYPES" FromRole="ELEMENTS_TYPES" ToRole="elements" />
+        </EntityType>
+        <EntityType Name="favorite">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="card_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.user_id" FromRole="favorite" ToRole="AspNetUsers" />
+          <NavigationProperty Name="cards" Relationship="Self.card_id" FromRole="favorite" ToRole="cards" />
+        </EntityType>
+        <EntityType Name="ITEM_TYPE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cards" Relationship="Self.FK_cards_toITEM_TYPE" FromRole="ITEM_TYPE" ToRole="cards" />
+          <NavigationProperty Name="COUNT" Relationship="Self.FK_count_toCard_ITEM_TYPE" FromRole="ITEM_TYPE" ToRole="COUNT" />
+          <NavigationProperty Name="elements" Relationship="Self.FK__elements__ITEM_TYPE" FromRole="ITEM_TYPE" ToRole="elements" />
+          <NavigationProperty Name="layout" Relationship="Self.FK_layout_toCard_ITEM_TYPE" FromRole="ITEM_TYPE" ToRole="layout" />
+        </EntityType>
+        <EntityType Name="layout">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ITEM_TYPE_ID" Type="Int32" />
+          <Property Name="width" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="height" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cards" Relationship="Self.FK_cards_ToLayout" FromRole="layout" ToRole="cards" />
+          <NavigationProperty Name="elements" Relationship="Self.FK__elements__layout" FromRole="layout" ToRole="elements" />
+          <NavigationProperty Name="ITEM_TYPE" Relationship="Self.FK_layout_toCard_ITEM_TYPE" FromRole="layout" ToRole="ITEM_TYPE" />
+          <Property Name="Image" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="materials">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="count" Type="Int32" />
+          <NavigationProperty Name="application" Relationship="Self.FK__application__material" FromRole="materials" ToRole="application" />
+        </EntityType>
+        <EntityType Name="Towns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Delivery" Relationship="Self.FK__Delivery__Towns" FromRole="Towns" ToRole="Delivery" />
+        </EntityType>
+        <Association Name="FK__application__count">
+          <End Role="COUNT" Type="Self.COUNT" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COUNT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="count_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__material">
+          <End Role="materials" Type="Self.materials" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="materials">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="material_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__user">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application__vc_id">
+          <End Role="cards" Type="Self.cards" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cards">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="vc_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__application_Delivery">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="0..1" />
+          <End Role="application" Type="Self.application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="application">
+              <PropertyRef Name="Delivery_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_toUser">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_id">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="favorite" Type="Self.favorite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="favorite">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARD_CLAIMS_tocards">
+          <End Role="cards" Type="Self.cards" Multiplicity="0..1" />
+          <End Role="CARD_CLAIMS" Type="Self.CARD_CLAIMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cards">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CARD_CLAIMS">
+              <PropertyRef Name="Card_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="card_id">
+          <End Role="cards" Type="Self.cards" Multiplicity="1" />
+          <End Role="favorite" Type="Self.favorite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cards">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="favorite">
+              <PropertyRef Name="card_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_toITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="0..1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="ITEM_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_cards_ToLayout">
+          <End Role="layout" Type="Self.layout" Multiplicity="0..1" />
+          <End Role="cards" Type="Self.cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layout">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="layout_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_count_toCard_ITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="0..1" />
+          <End Role="COUNT" Type="Self.COUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COUNT">
+              <PropertyRef Name="ITEM_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__Towns">
+          <End Role="Towns" Type="Self.Towns" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Towns">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="Town_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__elements__ELEMENTS_TYPES">
+          <End Role="ELEMENTS_TYPES" Type="Self.ELEMENTS_TYPES" Multiplicity="1" />
+          <End Role="elements" Type="Self.elements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ELEMENTS_TYPES">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="elements">
+              <PropertyRef Name="type_name_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__elements__ITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="1" />
+          <End Role="elements" Type="Self.elements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="elements">
+              <PropertyRef Name="item_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__elements__layout">
+          <End Role="layout" Type="Self.layout" Multiplicity="0..1" />
+          <End Role="elements" Type="Self.elements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layout">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="elements">
+              <PropertyRef Name="item_layout_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_layout_toCard_ITEM_TYPE">
+          <End Role="ITEM_TYPE" Type="Self.ITEM_TYPE" Multiplicity="0..1" />
+          <End Role="layout" Type="Self.layout" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEM_TYPE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="layout">
+              <PropertyRef Name="ITEM_TYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="application" EntityType="Self.application" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+          <EntitySet Name="CARD_CLAIMS" EntityType="Self.CARD_CLAIMS" />
+          <EntitySet Name="cards" EntityType="Self.cards" />
+          <EntitySet Name="COUNT" EntityType="Self.COUNT" />
+          <EntitySet Name="Delivery" EntityType="Self.Delivery" />
+          <EntitySet Name="elements" EntityType="Self.elements" />
+          <EntitySet Name="ELEMENTS_TYPES" EntityType="Self.ELEMENTS_TYPES" />
+          <EntitySet Name="favorite" EntityType="Self.favorite" />
+          <EntitySet Name="ITEM_TYPE" EntityType="Self.ITEM_TYPE" />
+          <EntitySet Name="layout" EntityType="Self.layout" />
+          <EntitySet Name="materials" EntityType="Self.materials" />
+          <EntitySet Name="Towns" EntityType="Self.Towns" />
+          <AssociationSet Name="FK__application__count" Association="Self.FK__application__count">
+            <End Role="COUNT" EntitySet="COUNT" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__material" Association="Self.FK__application__material">
+            <End Role="materials" EntitySet="materials" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__user" Association="Self.FK__application__user">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application__vc_id" Association="Self.FK__application__vc_id">
+            <End Role="cards" EntitySet="cards" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK__application_Delivery" Association="Self.FK__application_Delivery">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="application" EntitySet="application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_toUser" Association="Self.FK_cards_toUser">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="user_id" Association="Self.user_id">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="favorite" EntitySet="favorite" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARD_CLAIMS_tocards" Association="Self.FK_CARD_CLAIMS_tocards">
+            <End Role="cards" EntitySet="cards" />
+            <End Role="CARD_CLAIMS" EntitySet="CARD_CLAIMS" />
+          </AssociationSet>
+          <AssociationSet Name="card_id" Association="Self.card_id">
+            <End Role="cards" EntitySet="cards" />
+            <End Role="favorite" EntitySet="favorite" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_toITEM_TYPE" Association="Self.FK_cards_toITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_cards_ToLayout" Association="Self.FK_cards_ToLayout">
+            <End Role="layout" EntitySet="layout" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_count_toCard_ITEM_TYPE" Association="Self.FK_count_toCard_ITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="COUNT" EntitySet="COUNT" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__Towns" Association="Self.FK__Delivery__Towns">
+            <End Role="Towns" EntitySet="Towns" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK__elements__ELEMENTS_TYPES" Association="Self.FK__elements__ELEMENTS_TYPES">
+            <End Role="ELEMENTS_TYPES" EntitySet="ELEMENTS_TYPES" />
+            <End Role="elements" EntitySet="elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__elements__ITEM_TYPE" Association="Self.FK__elements__ITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="elements" EntitySet="elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__elements__layout" Association="Self.FK__elements__layout">
+            <End Role="layout" EntitySet="layout" />
+            <End Role="elements" EntitySet="elements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_layout_toCard_ITEM_TYPE" Association="Self.FK_layout_toCard_ITEM_TYPE">
+            <End Role="ITEM_TYPE" EntitySet="ITEM_TYPE" />
+            <End Role="layout" EntitySet="layout" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="IMAGES" EntityType="Model.IMAGES" />
+          <AssociationSet Name="FK_cards_toImages" Association="Model.FK_cards_toImages">
+            <End Role="IMAGES" EntitySet="IMAGES" />
+            <End Role="cards" EntitySet="cards" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="IMAGES">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cards" Relationship="Model.FK_cards_toImages" FromRole="IMAGES" ToRole="cards" />
+        </EntityType>
+        <Association Name="FK_cards_toImages">
+          <End Type="Model.IMAGES" Role="IMAGES" Multiplicity="1" />
+          <End Type="Model.cards" Role="cards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IMAGES">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="cards">
+              <PropertyRef Name="Images_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities1">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="Model.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="application">
+            <EntityTypeMapping TypeName="Model.application">
+              <MappingFragment StoreEntitySet="application">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="vc_id" ColumnName="vc_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="insertionDate" ColumnName="insertionDate" />
+                <ScalarProperty Name="finishDate" ColumnName="finishDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="count_id" ColumnName="count_id" />
+                <ScalarProperty Name="summ" ColumnName="summ" />
+                <ScalarProperty Name="material_id" ColumnName="material_id" />
+                <ScalarProperty Name="sender" ColumnName="sender" />
+                <ScalarProperty Name="operation_id" ColumnName="operation_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="withdrawamount" ColumnName="withdrawamount" />
+                <ScalarProperty Name="Delivery_id" ColumnName="Delivery_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="Model.AspNetRoles">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="Model.AspNetUserClaims">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="Model.AspNetUserLogins">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="Model.AspNetUsers">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ConfirmedEmail" ColumnName="ConfirmedEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARD_CLAIMS">
+            <EntityTypeMapping TypeName="Model.CARD_CLAIMS">
+              <MappingFragment StoreEntitySet="CARD_CLAIMS">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="Card_id" ColumnName="Card_id" />
+                <ScalarProperty Name="published" ColumnName="published" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cards">
+            <EntityTypeMapping TypeName="Model.cards">
+              <MappingFragment StoreEntitySet="cards">
+                <ScalarProperty Name="Images_id" ColumnName="Images_id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="layout_id" ColumnName="layout_id" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="preview" ColumnName="preview" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="published" ColumnName="published" />
+                <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
+                <ScalarProperty Name="preview_2" ColumnName="preview_2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COUNT">
+            <EntityTypeMapping TypeName="Model.COUNT">
+              <MappingFragment StoreEntitySet="COUNT">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
+                <ScalarProperty Name="COUNT_VALUE" ColumnName="COUNT_VALUE" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Delivery">
+            <EntityTypeMapping TypeName="Model.Delivery">
+              <MappingFragment StoreEntitySet="Delivery">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Town_id" ColumnName="Town_id" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="House" ColumnName="House" />
+                <ScalarProperty Name="Apartment" ColumnName="Apartment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="elements">
+            <EntityTypeMapping TypeName="Model.elements">
+              <MappingFragment StoreEntitySet="elements">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="type_name_id" ColumnName="type_name_id" />
+                <ScalarProperty Name="item_type_id" ColumnName="item_type_id" />
+                <ScalarProperty Name="item_layout_id" ColumnName="item_layout_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ELEMENTS_TYPES">
+            <EntityTypeMapping TypeName="Model.ELEMENTS_TYPES">
+              <MappingFragment StoreEntitySet="ELEMENTS_TYPES">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TYPE_NAME" ColumnName="TYPE_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="favorite">
+            <EntityTypeMapping TypeName="Model.favorite">
+              <MappingFragment StoreEntitySet="favorite">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="card_id" ColumnName="card_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITEM_TYPE">
+            <EntityTypeMapping TypeName="Model.ITEM_TYPE">
+              <MappingFragment StoreEntitySet="ITEM_TYPE">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="layout">
+            <EntityTypeMapping TypeName="Model.layout">
+              <MappingFragment StoreEntitySet="layout">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="materials">
+            <EntityTypeMapping TypeName="Model.materials">
+              <MappingFragment StoreEntitySet="materials">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="count" ColumnName="count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Towns">
+            <EntityTypeMapping TypeName="Model.Towns">
+              <MappingFragment StoreEntitySet="Towns">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="IMAGES">
+            <EntityTypeMapping TypeName="Model.IMAGES">
+              <MappingFragment StoreEntitySet="IMAGES">
+                <ScalarProperty Name="Image_2" ColumnName="Image_2" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

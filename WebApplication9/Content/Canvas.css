@@ -1,0 +1,40 @@
+﻿.l-main{
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+}
+.l-edit{
+    width: 70%;
+    height: 100%;
+    margin: 0px auto;
+}
+.canvas-container{
+    margin: 0px auto;
+}
+canvas{
+    box-shadow: 0px 0px 49px rgba(0, 0, 0, 0.2);
+    margin: 0px auto;
+}
+.l-canvas{
+    position: relative;
+    width: auto;
+    margin: 0px auto;
+}
+
+.l-canvas-nav{
+    position: relative;
+    margin: 0px auto;
+}
+
+.b-canvas-nav{
+    text-decoration: none;
+   
+}
+
+.b-canvas-nav-item{
+     display: inline-block;
+}
+
+.b-main-nav{
+    float: right;
+}

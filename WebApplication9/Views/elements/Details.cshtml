@@ -1,0 +1,52 @@
+﻿@model WebApplication9.Models.elements
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>elements</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           @Html.DisplayNameFor(model => model.path)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.path)" alt="Image" class="images" />            
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ELEMENTS_TYPES.TYPE_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ELEMENTS_TYPES.TYPE_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_TYPE.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_TYPE.NAME)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.layout.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.layout.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,3289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\public</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/aspnet-WebApplication9-20151218112142.mdf">
+      <publishTime>04/11/2017 14:31:20</publishTime>
+    </File>
+    <File Include="App_Data/aspnet-WebApplication9-20151218112142_log.ldf">
+      <publishTime>12/05/2016 19:58:21</publishTime>
+    </File>
+    <File Include="App_Data/card_contructor.mdf">
+      <publishTime>02/19/2016 14:04:10</publishTime>
+    </File>
+    <File Include="App_Data/card_contructor_log.ldf">
+      <publishTime>02/19/2016 14:04:10</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>12/18/2015 11:21:34</publishTime>
+    </File>
+    <File Include="bin/Duke.Owin.VkontakteMiddleware.dll">
+      <publishTime>06/10/2016 12:39:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/10/2016 12:39:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>06/10/2016 12:39:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>06/10/2016 12:39:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>12/18/2015 11:21:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>06/10/2016 12:39:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>12/18/2015 11:21:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>12/18/2015 11:21:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>12/18/2015 11:21:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>12/18/2015 11:21:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/18/2015 11:21:32</publishTime>
+    </File>
+    <File Include="bin/MvcCheckBoxList.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/10/2016 12:39:17</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>12/18/2015 11:21:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>12/18/2015 11:21:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/18/2015 11:21:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>12/18/2015 11:21:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/18/2015 11:21:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>12/18/2015 11:21:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>12/18/2015 11:21:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>12/18/2015 11:21:31</publishTime>
+    </File>
+    <File Include="bin/WebApplication9.dll">
+      <publishTime>04/11/2017 14:31:17</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>12/18/2015 11:21:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>08/31/2016 17:35:01</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>08/31/2016 17:35:01</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>08/31/2016 17:35:01</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Content/Canvas.css">
+      <publishTime>08/31/2016 17:14:48</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/css/font-awesome.css">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/css/font-awesome.min.css">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/fonts/fontawesome-webfont.eot">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/fonts/fontawesome-webfont.svg">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/fonts/fontawesome-webfont.woff">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/fonts/FontAwesome.otf">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/HELP-US-OUT.txt">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/animated.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/bordered-pulled.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/core.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/fixed-width.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/font-awesome.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/icons.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/larger.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/list.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/mixins.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/path.less">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/rotated-flipped.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/screen-reader.less">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/stacked.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/less/variables.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/font-awesome.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_animated.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_bordered-pulled.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_core.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_fixed-width.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_icons.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_larger.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_list.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_mixins.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_path.scss">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_rotated-flipped.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_screen-reader.scss">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_stacked.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/font-awesome-4.6.3/scss/_variables.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="Content/Main.css">
+      <publishTime>12/02/2016 17:50:01</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/23/2016 16:49:17</publishTime>
+    </File>
+    <File Include="Content/Style.css">
+      <publishTime>09/21/2016 13:00:48</publishTime>
+    </File>
+    <File Include="css/Canvas.css">
+      <publishTime>08/31/2016 17:14:48</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/css/font-awesome.css">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/css/font-awesome.min.css">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/fonts/fontawesome-webfont.eot">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/fonts/fontawesome-webfont.svg">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/fonts/fontawesome-webfont.woff">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/fonts/FontAwesome.otf">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/HELP-US-OUT.txt">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/animated.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/bordered-pulled.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/core.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/fixed-width.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/font-awesome.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/icons.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/larger.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/list.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/mixins.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/path.less">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/rotated-flipped.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/screen-reader.less">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/stacked.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/less/variables.less">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/font-awesome.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_animated.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_bordered-pulled.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_core.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_fixed-width.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_icons.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_larger.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_list.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_mixins.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_path.scss">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_rotated-flipped.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_screen-reader.scss">
+      <publishTime>07/29/2016 10:15:26</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_stacked.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/font-awesome-4.6.3/scss/_variables.scss">
+      <publishTime>07/29/2016 10:15:24</publishTime>
+    </File>
+    <File Include="css/Main.css">
+      <publishTime>08/11/2016 17:58:51</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>12/18/2015 11:21:25</publishTime>
+    </File>
+    <File Include="Files/ripple.gif">
+      <publishTime>09/21/2016 12:54:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/18/2015 11:21:25</publishTime>
+    </File>
+    <File Include="js/AllNewCard.js">
+      <publishTime>08/29/2016 15:23:28</publishTime>
+    </File>
+    <File Include="js/Application.js">
+      <publishTime>11/08/2016 11:55:05</publishTime>
+    </File>
+    <File Include="js/ApplyProcess.js">
+      <publishTime>08/23/2016 14:25:25</publishTime>
+    </File>
+    <File Include="js/ClobalJS.js">
+      <publishTime>06/24/2016 14:05:06</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/.gitignore">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/bower.json">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/index-svg.html">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/index.html">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/index.svg">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/jquery.min.js">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/LICENSE">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/qrcode.js">
+      <publishTime>08/31/2016 15:55:49</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/qrcode.min.js">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/davidshimjs-qrcodejs-04f46c6/README.md">
+      <publishTime>11/25/2015 02:43:20</publishTime>
+    </File>
+    <File Include="js/details.js">
+      <publishTime>09/05/2016 17:31:08</publishTime>
+    </File>
+    <File Include="js/Edit.js">
+      <publishTime>10/12/2016 11:18:36</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.bithoundrc">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.editorconfig">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.gitignore">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.jscs.json">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.jshintrc">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.npmignore">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/.travis.yml">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/bower.json">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/build.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/build.sh">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/build_all">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/CHANGELOG.md">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/CONTRIBUTING.md">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/create_build_script.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/dist/fabric.js">
+      <publishTime>06/27/2016 13:19:26</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/dist/fabric.min.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/dist/fabric.min.js.gz">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/dist/fabric.require.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/HEADER.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/aligning_guidelines.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/centering_guidelines.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/cufon.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/event.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/excanvas-diff.patch">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/excanvas.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/excanvas.js.orig">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/google_closure_compiler.jar">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/json2.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/screenshot.png">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/lib/yuicompressor-2.4.6.jar">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/LICENSE">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/package.json">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/README.md">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/amd/requirejs.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/brushes/base_brush.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/brushes/circle_brush.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/brushes/pattern_brush.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/brushes/pencil_brush.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/brushes/spray_brush.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/canvas.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/color.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/elements_parser.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/base_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/blend_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/brightness_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/convolute_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/gradienttransparency_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/grayscale_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/invert_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/mask_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/multiply_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/noise_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/pixelate_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/removewhite_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/resize_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/sepia2_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/sepia_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/filters/tint_filter.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/gradient.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/intersection.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/log.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/animation.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/canvas_dataurl_exporter.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/canvas_events.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/canvas_gestures.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/canvas_grouping.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/canvas_serialization.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/collection.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/itext.svg_export.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/itext_behavior.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/itext_click_behavior.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/itext_key_behavior.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/object.svg_export.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/object_geometry.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/object_interactivity.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/object_origin.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/object_stacking.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/object_straightening.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/observable.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/mixins/stateful.mixin.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/node.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/parser.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/pattern.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/point.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shadow.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/circle.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/ellipse.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/group.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/image.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/itext.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/line.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/object.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/path.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/path_group.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/polygon.class.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/polyline.class.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/rect.class.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/text.class.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/shapes/triangle.class.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/static_canvas.class.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/animate.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/anim_ease.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/arc.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/dom_event.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/dom_misc.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/dom_request.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/dom_style.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/lang_array.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/lang_class.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/lang_function.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/lang_object.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/lang_string.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/src/util/misc.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/car.svg">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/greyfloral.png">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/path.svg">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/svg_with_rect.svg">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/test_image.gif">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/test_script.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/fixtures/very_large_image.jpg">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/lib/canvas_assertions.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/lib/event.simulate.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/lib/qunit.css">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/lib/qunit.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/canvas.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/canvas_static.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/circle.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/color.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/ellipse.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/gradient.js">
+      <publishTime>06/10/2016 12:39:13</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/group.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/image.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/image_filters.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/itext.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/line.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/object.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/object_interactivity.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/observable.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/parser.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/path.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/path_group.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/pattern.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/polygon.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/polyline.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/rect.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/shadow.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/text.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.5.0/test/unit/util.js">
+      <publishTime>06/10/2016 12:39:14</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.bithoundrc">
+      <publishTime>12/18/2015 11:24:00</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.editorconfig">
+      <publishTime>12/18/2015 11:24:00</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.gitignore">
+      <publishTime>12/18/2015 11:24:00</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.jscs.json">
+      <publishTime>12/18/2015 11:24:00</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.jshintrc">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.jshintrc_tests">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.npmignore">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/.travis.yml">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/Apply.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/bower.json">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/build.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/build.sh">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/build_all">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/CHANGELOG.md">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/CODE_OF_CONDUCT.md">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/CONTRIBUTING.md">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/create_build_script.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/dist/fabric.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/dist/fabric.min.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/dist/fabric.min.js.gz">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/dist/fabric.require.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/HEADER.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/aligning_guidelines.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/centering_guidelines.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/cufon.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/event.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/excanvas-diff.patch">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/excanvas.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/excanvas.js.orig">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/google_closure_compiler.jar">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/json2.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/screenshot.png">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/lib/yuicompressor-2.4.6.jar">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/LICENSE">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/package.json">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/README.md">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/amd/requirejs.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/brushes/base_brush.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/brushes/circle_brush.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/brushes/pattern_brush.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/brushes/pencil_brush.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/brushes/spray_brush.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/canvas.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/color.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/elements_parser.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/base_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/blend_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/brightness_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/convolute_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/gradienttransparency_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/grayscale_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/invert_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/mask_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/multiply_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/noise_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/pixelate_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/removewhite_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/resize_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/sepia2_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/sepia_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/filters/tint_filter.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/gradient.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/intersection.class.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/log.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/animation.mixin.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/canvas_dataurl_exporter.mixin.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/canvas_events.mixin.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/canvas_gestures.mixin.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/canvas_grouping.mixin.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/canvas_serialization.mixin.js">
+      <publishTime>12/18/2015 11:24:01</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/collection.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/itext.svg_export.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/itext_behavior.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/itext_click_behavior.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/itext_key_behavior.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/object.svg_export.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/object_geometry.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/object_interactivity.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/object_origin.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/object_stacking.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/object_straightening.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/observable.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/stateful.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/textbox_behavior.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/mixins/textbox_click_behavior.mixin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/node.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/parser.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/pattern.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/point.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shadow.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/circle.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/ellipse.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/group.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/image.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/itext.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/line.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/object.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/path.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/path_group.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/polygon.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/polyline.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/rect.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/text.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/textbox.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/shapes/triangle.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/static_canvas.class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/animate.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/animate_color.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/anim_ease.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/arc.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/dom_event.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/dom_misc.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/dom_request.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/dom_style.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/lang_array.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/lang_class.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/lang_function.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/lang_object.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/lang_string.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/src/util/misc.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/car.svg">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/greyfloral.png">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/path.svg">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/svg_with_rect.svg">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/test_image.gif">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/test_script.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/fixtures/very_large_image.jpg">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/lib/canvas_assertions.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/lib/event.simulate.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/lib/qunit.css">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/lib/qunit.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/canvas.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/canvas_static.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/circle.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/color.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/ellipse.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/gradient.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/group.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/image.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/image_filters.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/itext.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/line.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/object.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/object_interactivity.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/object_origin.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/observable.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/parser.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/path.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/path_group.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/pattern.js">
+      <publishTime>12/18/2015 11:24:02</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/polygon.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/polyline.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/rect.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/shadow.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/text.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/fabric.js-1.6.0-rc.1/test/unit/util.js">
+      <publishTime>12/18/2015 11:24:03</publishTime>
+    </File>
+    <File Include="js/flip.js">
+      <publishTime>11/08/2016 11:26:28</publishTime>
+    </File>
+    <File Include="js/JS.js">
+      <publishTime>06/10/2016 12:39:12</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/.gitignore">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/bower.json">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/bower.json.bak">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/build.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/build.sh">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/CNAME">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/dist/jspdf.debug.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/dist/jspdf.min.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/files.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/index.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/plugins/from_html.md">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/FontObject.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/jsPDF-jsPDF.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/jsPDF-PubSub.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/jsPDF.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/jsPDFClass.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/PubSub.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/src/c__work_jsPDF_jspdf.js.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/src/c__work_jsPDF_tools_jspdf.js.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/src/jspdf.js.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/doc/symbols/_global_.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/docs/getting_started.md">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/annotation/test_annotation-magFactor.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/annotation/test_annotation.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/annotation/test_annotation.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/annotation/test_annotation_2.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/basic.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/css/bootstrap-responsive.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/css/bootstrap-responsive.min.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/css/bootstrap.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/css/bootstrap.min.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/img/glyphicons-halflings-white.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/img/glyphicons-halflings.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/js/bootstrap.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/bootstrap/js/bootstrap.min.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/context2d/test_context2d.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/context2d/test_context2d_paths.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/editor.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/main.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-icons_222222_256x240.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-icons_454545_256x240.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-icons_888888_256x240.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/css/smoothness/jquery-ui-1.8.17.custom.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/downloadify.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/auto_break.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/examples.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/images/favicon.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/lists.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/page_break.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/pdf.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/pdf2.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/showcase.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/showcase_supported_html.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/simple.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/tables.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/html2pdf/total_mess.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/24_bit.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/32_bit.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/grayscale_16bpc.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/grayscale_8bpc.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/grayscale_alpha_16_bpc.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/grayscale_alpha_8bpc.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/grid.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/jpg.jpg">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/png8_flat.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/png8_trans.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/RGBA_16bpc.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/RGB_16bpc.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/images/tiny_png_indexed.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/jaxer.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/AcroForm.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/basic.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/circles.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/editor.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/font-faces.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/font-size.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/from-html.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/html2canvas.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/images.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/jquery/jquery-1.7.1.min.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/jquery/jquery-ui-1.8.17.custom.min.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/kitchen-sink.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/landscape.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/lines.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/rectangles.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/string-splitting.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/test_harness.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/text-colors.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/theme-ambiance.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/triangles.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/two-page.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/js/user-input.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/jspdf.PLUGINTEMPLATE.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/null-logo-trans.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/octocat.jpg">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/octocat.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/outline/test_outline.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/outline/test_outline.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/runner.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/test_from_html.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/test_from_html_css_page_breaks.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/test_insert_page.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/examples/thinking-monkey.jpg">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/index.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/ISSUE_TEMPLATE.md">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/jspdf.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/css_colors.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/deflate.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/images/download.png">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/js/downloadify.min.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/js/swfobject.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/LICENSE.txt">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/media/downloadify.swf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/README.textile">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/src/com/dynamicflash/util/Base64.as">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/src/com/dynamicflash/util/tests/Base64Test.as">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/src/Downloadify.as">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/src/downloadify.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/Downloadify/test.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/dist/html2canvas.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/LICENSE">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/readme.md">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/core.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/dummyimagecontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/fallback.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/font.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/fontmetrics.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/framecontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/gradientcontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/imagecontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/imageloader.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/lineargradientcontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/log.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/nodecontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/nodeparser.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/promise.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/proxy.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/proxyimagecontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/pseudoelementcontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/renderer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/renderers/canvas.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/stackingcontext.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/support.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/svgcontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/svgnodecontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/textcontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/webkitgradientcontainer.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2canvas/src/xhr.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/html2pdf.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/png_support/png.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/png_support/zlib.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/polyfill.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/README">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/require/config.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/libs/require/require.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/main.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/MIT-LICENSE.txt">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/package.json">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/acroform.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/addhtml.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/addimage.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/annotations.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/autoprint.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/canvas.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/cell.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/context2d.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/from_html.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/javascript.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/outline.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/png_support.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/prevent_scale_to_fit.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/split_text_to_size.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/standard_fonts_metrics.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/svg.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/total_pages.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/plugins/xmp_metadata.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/README.md">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/SUMMARY.md">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/001_blankpdf.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/002_twopagedoc.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/002_twopagedoc_oldapi.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/003_demolandscape.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/004_fontsizes.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/005_demofonttypes.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/006_demotestcolors.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/007_demometadata.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/008_demorectangles.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/009_demoliness.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/010_democircles.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/011_multilinetext.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/012_multiplelines.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/013_sillysvgrenderer.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/013_sillysvgrenderer.svg">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/014_addImage.jpeg">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/014_addImage.jpeg.base64.txt">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/014_addImage.pdf.base64.txt">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/014_addImage.txt">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/015_splittext.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/015_splittext.pdf">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/components_tests.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/index.htm">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/libs/curl-0.5.4.min.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/libs/custom_fill.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/libs/qunit.css">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/libs/qunit.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/pdf_generate_tests.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/test.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/test_from_html_css_page_breaks.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/test_harness.js">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/test/test_min.html">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/jsPDF-master/todo.txt">
+      <publishTime>06/14/2016 08:17:26</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/bower.json">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/css/msdropdown/dd.css">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/css/msdropdown/flags.css">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/css/msdropdown/skin2.css">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/css/msdropdown/sprite.css">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/byjson.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/css-sprite.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/css/sample.css">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/help.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/index.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/mouse-events.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/multiple-skin.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/object-oriented-approach-more.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/object-oriented-approach.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/submitdata.php">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/examples/use-checkbox.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/GPL-LICENSE.txt">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/1273404841_tick_16.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Amex-56.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/blank.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/browser-chrome.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/browser-firefox.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/browser-msie.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/browser-opera.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/browser-safari.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/button-large.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Cash-56.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/demoaction.jpg">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Discover-56.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/enabled.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/flagssprite_small.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/giftlelo_dot_com.jpg">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon-search.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_calendar.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_cart.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_cd.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_email.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_faq.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_games.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_lockopen.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_music.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_phone.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_sales.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_secure.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/icon_video.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/jquery-msdropdown.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Mastercard-56.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/msDropDown.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Paypal-56.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/preview.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/sprite.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/sprite.jpg">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Thumbs.db">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/tick.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/icons/Visa-56.png">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/skin1/dd_arrow.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/skin1/title-bg.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/skin2/dd_arrow.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/skin2/icon-ok.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/images/msdropdown/skin2/title-bg.gif">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/index.html">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/js/jquery/jquery-1.9.0.min.js">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/js/jquery/tester.js">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/js/msdropdown/jquery.dd.js">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/js/msdropdown/jquery.dd.min.js">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/MIT-LICENSE.txt">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/Readme.md">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/ms-Dropdown-master/Readme.txt">
+      <publishTime>12/06/2015 22:26:16</publishTime>
+    </File>
+    <File Include="js/sly-master/.editorconfig">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/.jshintrc">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/CHANGELOG.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/CONTRIBUTING.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/dist/sly.js">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/dist/sly.min.js">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Calling.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Events.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Markup.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Methods.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Options.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Parallax.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/Properties.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/docs/README.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/Gruntfile.js">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/meta.json">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/package.json">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/README.md">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/sly.jquery.json">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sly-master/src/sly.js">
+      <publishTime>08/08/2015 08:45:52</publishTime>
+    </File>
+    <File Include="js/sylvester.js">
+      <publishTime>12/18/2015 11:23:26</publishTime>
+    </File>
+    <File Include="js/sylvester.src.js">
+      <publishTime>12/18/2015 11:23:26</publishTime>
+    </File>
+    <File Include="js/UploadSVG.js">
+      <publishTime>09/06/2016 14:52:46</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>10/11/2016 11:15:10</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/18/2016 15:58:21</publishTime>
+    </File>
+    <File Include="Resources/instagram-256.png">
+      <publishTime>07/28/2016 16:51:57</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/31/2016 17:35:00</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/31/2016 17:34:59</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.bithoundrc">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.editorconfig">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.gitignore">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.jscs.json">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.jshintrc">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.npmignore">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/.travis.yml">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/bower.json">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/build.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/build.sh">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/build_all">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/CHANGELOG.md">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/CONTRIBUTING.md">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/create_build_script.js">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/dist/fabric.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/dist/fabric.min.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/dist/fabric.min.js.gz">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/dist/fabric.require.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/HEADER.js">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/aligning_guidelines.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/centering_guidelines.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/cufon.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/event.js">
+      <publishTime>09/09/2016 16:44:26</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/excanvas-diff.patch">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/excanvas.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/excanvas.js.orig">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/google_closure_compiler.jar">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/json2.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/screenshot.png">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/lib/yuicompressor-2.4.6.jar">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/LICENSE">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/package.json">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/README.md">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/amd/requirejs.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/brushes/base_brush.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/brushes/circle_brush.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/brushes/pattern_brush.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/brushes/pencil_brush.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/brushes/spray_brush.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/canvas.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/color.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/elements_parser.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/base_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/blend_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/brightness_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/convolute_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/gradienttransparency_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/grayscale_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/invert_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/mask_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/multiply_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/noise_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/pixelate_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/removewhite_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/resize_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/sepia2_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/sepia_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/filters/tint_filter.class.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/gradient.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/intersection.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/log.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/animation.mixin.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/canvas_dataurl_exporter.mixin.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/canvas_events.mixin.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/canvas_gestures.mixin.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/canvas_grouping.mixin.js">
+      <publishTime>09/09/2016 16:44:27</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/canvas_serialization.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/collection.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/itext.svg_export.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/itext_behavior.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/itext_click_behavior.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/itext_key_behavior.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/object.svg_export.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/object_geometry.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/object_interactivity.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/object_origin.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/object_stacking.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/object_straightening.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/observable.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/mixins/stateful.mixin.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/node.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/parser.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/pattern.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/point.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shadow.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/circle.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/ellipse.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/group.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/image.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/itext.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/line.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/object.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/path.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/path_group.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/polygon.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/polyline.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/rect.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/text.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/shapes/triangle.class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/static_canvas.class.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/animate.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/anim_ease.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/arc.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/dom_event.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/dom_misc.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/dom_request.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/dom_style.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/lang_array.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/lang_class.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/lang_function.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/lang_object.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/lang_string.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/src/util/misc.js">
+      <publishTime>09/09/2016 16:44:28</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test.js">
+      <publishTime>09/09/2016 16:44:30</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/car.svg">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/greyfloral.png">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/path.svg">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/svg_with_rect.svg">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/test_image.gif">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/test_script.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/fixtures/very_large_image.jpg">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/lib/canvas_assertions.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/lib/event.simulate.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/lib/qunit.css">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/lib/qunit.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/canvas.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/canvas_static.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/circle.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/color.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/ellipse.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/gradient.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/group.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/image.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/image_filters.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/itext.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/line.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/object.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/object_interactivity.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/observable.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/parser.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/path.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/path_group.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/pattern.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/polygon.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/polyline.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/rect.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/shadow.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/text.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/fabric.js-1.5.0/test/unit/util.js">
+      <publishTime>09/09/2016 16:44:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>12/18/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>12/18/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>12/18/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.js">
+      <publishTime>11/18/2016 15:58:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.js">
+      <publishTime>11/18/2016 15:58:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.map">
+      <publishTime>11/18/2016 15:58:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.js">
+      <publishTime>11/18/2016 15:58:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.js">
+      <publishTime>11/18/2016 15:58:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.map">
+      <publishTime>11/18/2016 15:58:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>02/26/2016 14:07:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>02/26/2016 14:07:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>12/18/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>12/18/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>12/18/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/18/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>12/18/2015 11:21:32</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>12/18/2015 11:21:34</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>12/18/2015 11:21:34</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>11/18/2016 15:58:23</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>12/18/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>08/11/2016 15:43:45</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>12/18/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>08/11/2016 15:43:05</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>12/18/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>08/11/2016 15:41:40</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveAccountPartial.cshtml">
+      <publishTime>12/18/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>12/18/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Views/addCards/chooseItemType.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/addCards/Create.cshtml">
+      <publishTime>10/06/2016 10:29:06</publishTime>
+    </File>
+    <File Include="Views/addCards/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/addCards/Details.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/addCards/Edit.cshtml">
+      <publishTime>03/10/2017 15:01:58</publishTime>
+    </File>
+    <File Include="Views/addCards/Index.cshtml">
+      <publishTime>09/09/2016 16:56:27</publishTime>
+    </File>
+    <File Include="Views/applications/Create.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/applications/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/applications/Details.cshtml">
+      <publishTime>09/09/2016 16:58:20</publishTime>
+    </File>
+    <File Include="Views/applications/Edit.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/applications/Index.cshtml">
+      <publishTime>09/06/2016 14:06:14</publishTime>
+    </File>
+    <File Include="Views/applications/ManagerApplicationList.cshtml">
+      <publishTime>09/08/2016 10:46:04</publishTime>
+    </File>
+    <File Include="Views/applications/UserApplicationList.cshtml">
+      <publishTime>09/28/2016 12:06:47</publishTime>
+    </File>
+    <File Include="Views/applications/_AppItems.cshtml">
+      <publishTime>09/21/2016 10:47:57</publishTime>
+    </File>
+    <File Include="Views/applications/_ManagerApp.cshtml">
+      <publishTime>09/21/2016 10:32:19</publishTime>
+    </File>
+    <File Include="Views/AspNetRoles/Create.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/AspNetRoles/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/AspNetRoles/Details.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/AspNetRoles/Edit.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/AspNetRoles/Index.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/AspNetUsers/Create.cshtml">
+      <publishTime>06/17/2016 11:33:20</publishTime>
+    </File>
+    <File Include="Views/AspNetUsers/Delete.cshtml">
+      <publishTime>06/17/2016 11:33:21</publishTime>
+    </File>
+    <File Include="Views/AspNetUsers/Details.cshtml">
+      <publishTime>08/09/2016 17:49:16</publishTime>
+    </File>
+    <File Include="Views/AspNetUsers/Edit.cshtml">
+      <publishTime>06/17/2016 13:20:58</publishTime>
+    </File>
+    <File Include="Views/AspNetUsers/Index.cshtml">
+      <publishTime>06/30/2016 17:13:33</publishTime>
+    </File>
+    <File Include="Views/cards/Create.cshtml">
+      <publishTime>09/09/2016 17:00:41</publishTime>
+    </File>
+    <File Include="Views/cards/Delete.cshtml">
+      <publishTime>03/10/2017 15:10:37</publishTime>
+    </File>
+    <File Include="Views/cards/Details.cshtml">
+      <publishTime>03/10/2017 15:04:13</publishTime>
+    </File>
+    <File Include="Views/cards/Edit.cshtml">
+      <publishTime>09/09/2016 17:01:14</publishTime>
+    </File>
+    <File Include="Views/cards/GroupedCards.cshtml">
+      <publishTime>09/09/2016 17:01:24</publishTime>
+    </File>
+    <File Include="Views/cards/Index.cshtml">
+      <publishTime>09/09/2016 17:01:37</publishTime>
+    </File>
+    <File Include="Views/cards/ManagerCards.cshtml">
+      <publishTime>09/09/2016 17:02:32</publishTime>
+    </File>
+    <File Include="Views/cards/UserCardsList.cshtml">
+      <publishTime>09/08/2016 11:30:34</publishTime>
+    </File>
+    <File Include="Views/cards2/Create.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/cards2/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/cards2/Details.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/cards2/Edit.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/cards2/Index.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/Create.cshtml">
+      <publishTime>06/17/2016 17:12:48</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/Delete.cshtml">
+      <publishTime>06/17/2016 17:12:50</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/Details.cshtml">
+      <publishTime>06/17/2016 17:32:19</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/Edit.cshtml">
+      <publishTime>06/17/2016 17:12:57</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/getItemTypes.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/groupedClaims.cshtml">
+      <publishTime>06/17/2016 17:17:44</publishTime>
+    </File>
+    <File Include="Views/CARD_CLAIMS/Index.cshtml">
+      <publishTime>06/17/2016 17:18:53</publishTime>
+    </File>
+    <File Include="Views/COUNTs/Create.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/COUNTs/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/COUNTs/Details.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/COUNTs/Edit.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/COUNTs/Index.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Deliveries/Create.cshtml">
+      <publishTime>08/09/2016 14:38:38</publishTime>
+    </File>
+    <File Include="Views/Deliveries/Delete.cshtml">
+      <publishTime>08/09/2016 14:38:39</publishTime>
+    </File>
+    <File Include="Views/Deliveries/Details.cshtml">
+      <publishTime>08/09/2016 14:38:40</publishTime>
+    </File>
+    <File Include="Views/Deliveries/Edit.cshtml">
+      <publishTime>08/09/2016 14:38:40</publishTime>
+    </File>
+    <File Include="Views/Deliveries/Index.cshtml">
+      <publishTime>08/09/2016 14:38:41</publishTime>
+    </File>
+    <File Include="Views/elements/Create.cshtml">
+      <publishTime>10/11/2016 13:47:52</publishTime>
+    </File>
+    <File Include="Views/elements/Delete.cshtml">
+      <publishTime>09/06/2016 12:50:42</publishTime>
+    </File>
+    <File Include="Views/elements/Details.cshtml">
+      <publishTime>09/06/2016 12:49:44</publishTime>
+    </File>
+    <File Include="Views/elements/Edit.cshtml">
+      <publishTime>09/06/2016 12:44:41</publishTime>
+    </File>
+    <File Include="Views/elements/Index.cshtml">
+      <publishTime>09/07/2016 11:13:47</publishTime>
+    </File>
+    <File Include="Views/ELEMENTS_TYPES/Create.cshtml">
+      <publishTime>07/27/2016 14:53:09</publishTime>
+    </File>
+    <File Include="Views/ELEMENTS_TYPES/Delete.cshtml">
+      <publishTime>07/27/2016 14:53:09</publishTime>
+    </File>
+    <File Include="Views/ELEMENTS_TYPES/Details.cshtml">
+      <publishTime>07/27/2016 14:53:10</publishTime>
+    </File>
+    <File Include="Views/ELEMENTS_TYPES/Edit.cshtml">
+      <publishTime>07/27/2016 14:53:11</publishTime>
+    </File>
+    <File Include="Views/ELEMENTS_TYPES/Index.cshtml">
+      <publishTime>07/27/2016 14:53:11</publishTime>
+    </File>
+    <File Include="Views/favorites/Create.cshtml">
+      <publishTime>08/25/2016 15:28:50</publishTime>
+    </File>
+    <File Include="Views/favorites/Delete.cshtml">
+      <publishTime>08/25/2016 15:28:51</publishTime>
+    </File>
+    <File Include="Views/favorites/Details.cshtml">
+      <publishTime>08/25/2016 15:28:52</publishTime>
+    </File>
+    <File Include="Views/favorites/Edit.cshtml">
+      <publishTime>08/25/2016 15:28:54</publishTime>
+    </File>
+    <File Include="Views/favorites/Index.cshtml">
+      <publishTime>08/25/2016 15:28:55</publishTime>
+    </File>
+    <File Include="Views/favorites/MyFavorite.cshtml">
+      <publishTime>08/26/2016 16:48:16</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>12/18/2015 11:27:21</publishTime>
+    </File>
+    <File Include="Views/Home/AddNewApplication.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/AddNewCard.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/AddNewLayout.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/AddNewMaterial.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/AddNewService.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/AddNewUserRole.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/AllNewCard.cshtml">
+      <publishTime>08/29/2016 15:25:20</publishTime>
+    </File>
+    <File Include="Views/Home/ApplicationDetails.cshtml">
+      <publishTime>03/10/2016 14:31:26</publishTime>
+    </File>
+    <File Include="Views/Home/ApplicationList.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Home/Apply.cshtml">
+      <publishTime>10/05/2016 12:30:19</publishTime>
+    </File>
+    <File Include="Views/Home/ApplyCheck.cshtml">
+      <publishTime>09/23/2016 17:24:03</publishTime>
+    </File>
+    <File Include="Views/Home/CardsList.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>12/18/2015 11:27:20</publishTime>
+    </File>
+    <File Include="Views/Home/Done.cshtml">
+      <publishTime>12/18/2015 11:27:19</publishTime>
+    </File>
+    <File Include="Views/Home/DoneApplicationList.cshtml">
+      <publishTime>08/23/2016 14:31:19</publishTime>
+    </File>
+    <File Include="Views/Home/DropDown.cshtml">
+      <publishTime>12/18/2015 11:27:19</publishTime>
+    </File>
+    <File Include="Views/Home/EditLayout.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Home/Error.cshtml">
+      <publishTime>09/28/2016 11:04:59</publishTime>
+    </File>
+    <File Include="Views/Home/exSearch.cshtml">
+      <publishTime>12/05/2016 19:50:02</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/26/2016 16:19:12</publishTime>
+    </File>
+    <File Include="Views/Home/ItemLayouts.cshtml">
+      <publishTime>10/05/2016 12:30:19</publishTime>
+    </File>
+    <File Include="Views/Home/ItemTypes.cshtml">
+      <publishTime>12/02/2016 17:21:39</publishTime>
+    </File>
+    <File Include="Views/Home/LayoutList.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Home/Manager.cshtml">
+      <publishTime>09/09/2016 16:09:36</publishTime>
+    </File>
+    <File Include="Views/Home/ManagerApplicationList.cshtml">
+      <publishTime>08/23/2016 14:31:28</publishTime>
+    </File>
+    <File Include="Views/Home/ManagerLayout.cshtml">
+      <publishTime>12/18/2015 16:19:54</publishTime>
+    </File>
+    <File Include="Views/Home/MaterialsList.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/PaymentSubmit.cshtml">
+      <publishTime>10/07/2016 17:42:58</publishTime>
+    </File>
+    <File Include="Views/Home/PrintApplicationList.cshtml">
+      <publishTime>08/23/2016 14:35:04</publishTime>
+    </File>
+    <File Include="Views/Home/ServiceTypeList.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/SetCanvas.cshtml">
+      <publishTime>11/23/2016 17:16:42</publishTime>
+    </File>
+    <File Include="Views/Home/UploadCardLayout.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Home/UploadPartial.cshtml">
+      <publishTime>12/18/2015 11:27:18</publishTime>
+    </File>
+    <File Include="Views/Home/UserApplication.cshtml">
+      <publishTime>08/26/2016 15:43:24</publishTime>
+    </File>
+    <File Include="Views/Home/UserCards.cshtml">
+      <publishTime>08/26/2016 16:38:08</publishTime>
+    </File>
+    <File Include="Views/Home/UserInfo.cshtml">
+      <publishTime>07/21/2016 17:53:14</publishTime>
+    </File>
+    <File Include="Views/Home/UserList.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Home/UserRoleList.cshtml">
+      <publishTime>12/18/2015 13:15:43</publishTime>
+    </File>
+    <File Include="Views/Home/Users.cshtml">
+      <publishTime>09/08/2016 11:50:18</publishTime>
+    </File>
+    <File Include="Views/Home/YandexPayment.cshtml">
+      <publishTime>10/05/2016 12:30:19</publishTime>
+    </File>
+    <File Include="Views/ITEM_TYPE/Create.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/ITEM_TYPE/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/ITEM_TYPE/Details.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/ITEM_TYPE/Edit.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/ITEM_TYPE/Index.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/layouts/Create.cshtml">
+      <publishTime>10/12/2016 11:51:47</publishTime>
+    </File>
+    <File Include="Views/layouts/Delete.cshtml">
+      <publishTime>06/17/2016 17:05:40</publishTime>
+    </File>
+    <File Include="Views/layouts/Details.cshtml">
+      <publishTime>06/17/2016 17:05:40</publishTime>
+    </File>
+    <File Include="Views/layouts/Edit.cshtml">
+      <publishTime>10/12/2016 12:41:56</publishTime>
+    </File>
+    <File Include="Views/layouts/Index.cshtml">
+      <publishTime>10/11/2016 11:40:45</publishTime>
+    </File>
+    <File Include="Views/materials/Create.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/materials/Delete.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/materials/Details.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/materials/Edit.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/materials/Index.cshtml">
+      <publishTime>06/10/2016 12:39:11</publishTime>
+    </File>
+    <File Include="Views/Order/Index.cshtml">
+      <publishTime>07/11/2016 16:07:12</publishTime>
+    </File>
+    <File Include="Views/Shared/Cards.cshtml">
+      <publishTime>09/21/2016 12:30:31</publishTime>
+    </File>
+    <File Include="Views/Shared/DetailsPartial.cshtml">
+      <publishTime>08/09/2016 16:51:13</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>12/18/2015 11:21:35</publishTime>
+    </File>
+    <File Include="Views/Shared/Menu.cshtml">
+      <publishTime>11/23/2016 17:15:01</publishTime>
+    </File>
+    <File Include="Views/Shared/View.cshtml">
+      <publishTime>08/26/2016 16:08:39</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/18/2016 16:10:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout1.cshtml">
+      <publishTime>12/18/2015 11:27:35</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>10/12/2016 13:44:03</publishTime>
+    </File>
+    <File Include="Views/Towns/Create.cshtml">
+      <publishTime>08/09/2016 14:38:04</publishTime>
+    </File>
+    <File Include="Views/Towns/Delete.cshtml">
+      <publishTime>08/09/2016 14:38:05</publishTime>
+    </File>
+    <File Include="Views/Towns/Details.cshtml">
+      <publishTime>08/09/2016 14:38:06</publishTime>
+    </File>
+    <File Include="Views/Towns/Edit.cshtml">
+      <publishTime>08/09/2016 14:38:07</publishTime>
+    </File>
+    <File Include="Views/Towns/Index.cshtml">
+      <publishTime>08/09/2016 14:38:08</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/18/2015 11:21:25</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/18/2015 11:21:25</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/12/2016 20:14:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

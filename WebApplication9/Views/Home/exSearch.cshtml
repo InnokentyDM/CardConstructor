@@ -1,0 +1,100 @@
+﻿@model WebApplication9.Models.Search
+@{
+        ViewBag.Title = "Макеты";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    @Scripts.Render("~/js/Application.js")
+
+
+    @using MvcCheckBoxList.Model
+<div id="b-main">
+    <div id="b-checkboxlist">       
+        @using (Html.BeginForm())
+        {
+            @Html.Display("Расширенный поиск")
+            <br />
+            @Html.CheckBoxListFor(model => model.postedItems.IDs,
+                                      model => model.availItems,
+                                      i => i.Name,
+                                      i => i.Name,
+                                      model => model.selectedItems,
+                                      Position.Vertical)
+
+            <p>
+                <input type="submit" value="Применить" />
+            </p>
+        }
+    </div>
+
+
+    <div id="b-cards">
+
+        <table class="table">   
+            <div class="container">
+                <div class="panel-group">
+                    <div class="col-xs-3 no-padding">
+                        <div class="panel-card">
+                            <div class="panel-body">
+                                <div id="new-card">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            @Html.ActionLink("Создать с нуля", "../Home/AllNewCard/")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-card-footer">
+                                <ul class="card-menu">
+                                    <li>
+                                        <button class="btn btn-link" onclick="location.href='@Url.Action("AllNewCard", "Home")'">Редактировать</button>
+                                    </li>
+                                    <li>
+                                        <button class="btn btn-link">Посмотреть оборот</button>
+                                    </li>
+                                    <li>
+                                        <button class="btn btn-link">Добавить в избранное</button>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach (var item in Model.Cards)
+                    {
+                        <div class="col-xs-3 no-padding">
+                            <div class="panel-card">
+                                <input type="hidden" id="@("label"+item.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => item.IMAGES.Image)" />
+                                <input type="hidden" id="@("label_s2"+item.Id)" class="hiddenId_s2" value="@Html.DisplayFor(modelItem => item.IMAGES.Image_2)" />
+                                <input type="hidden" id="@("width"+item.Id)" class="hiddenWidth" value="@Html.DisplayFor(modelItem => item.layout.width)" />
+                                <input type="hidden" id="@("height"+item.Id)" class="hiddenHeight" value="@Html.DisplayFor(modelItem => item.layout.height)" />
+                                <div class="panel-body">
+
+                                    @*<canvas id="@Html.DisplayFor(modelItem => item.Id)" class="preview"></canvas>
+                                    <canvas id="@("s2" + item.Id)" class="preview_s2"></canvas>*@
+                                    <img src="@Url.Content(item.preview)" alt="Image" class="images" />
+                                </div>
+                                <div class="panel-card-footer">
+                                    <ul class="card-menu">
+                                        <li>
+                                       
+                                            @Html.ActionLink("Редактировать", "SetCanvas", "Home", new { @id = item.Id }, new { @class = "s" })
+                                        </li>
+                                        <li>
+                                            <button class="btn btn-link">Посмотреть оборот</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn-link" id="@("btn" + item.Id)" onclick="onFavoriteButtonClick(this)">Добавить в избранное</button>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </table>
+    </div>
+</div>

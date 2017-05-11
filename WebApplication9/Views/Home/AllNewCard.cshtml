@@ -1,0 +1,258 @@
+﻿@model WebApplication9.Models.cards
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/Canvas.css")
+@Scripts.Render("~/scripts/jquery-1.10.2.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+@*@Scripts.Render("~/js/UploadSVG.js")*@
+@Scripts.Render("~/js/AllNewCard.js")
+@Scripts.Render("~/js/fabric.js-1.5.0/lib/aligning_guidelines.js")
+@Scripts.Render("~/js/fabric.js-1.5.0/lib/centering_guidelines.js")
+@Scripts.Render("~/js/fabric.js-1.5.0/dist/fabric.js")
+
+@section Scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#textstyle").popover({
+                title: 'Стиль текста',
+                content: '',
+                trigger: 'hover',
+                placement: 'right'
+            });
+        });
+        $(document).ready(function () {
+            $("#textcolor").popover({
+                title: 'Цвет текста',
+                content: '',
+                trigger: 'hover',
+                placement: 'right'
+            });
+        });
+
+        $(this.document).ready(function () {
+            //    $('#ddl1').change(function () //wire up on change event of the 'country' dropdownlist
+            //    {
+            //        var canvas = document.getElementById("canvas").fabric;
+            //        var canvass2 = document.getElementById("canvas_s2").fabric;
+            //        var selection = jQuery("#ddl1 option:selected").text();
+            //        var ret = selection.split(/\s+/);
+            //        var str1 = parseInt(ret[0]) + 4;
+            //        var wdth = parseInt(ret[0]);
+            //        var hght = parseInt(ret[1]);
+            //        var str2 = parseInt(ret[1]) + 4;
+            //        str1 = "" + str1;
+            //        str2 = "" + str2;
+
+            //        canvas.width = str1;
+            //        canvas.height = str2;
+            //        canvass2.width = str1;
+            //        canvass2.height = str2;
+
+            //        canvas.forEachObject(function (obj) {
+            //            var id = obj.id;
+            //            if (id == 'safetyBorders')
+            //            {
+            //                obj.width = wdth - 20;
+            //                obj.height = hght - 20;
+            //            }
+            //            if (id == 'textField') {
+            //                obj.width = wdth - 60;
+            //                obj.height = hght - 60;
+            //            }
+            //        });
+
+            //        canvass2.forEachObject(function (obj) {
+            //            var id = obj.id;
+            //            if (id == 'safetyBorders') {
+            //                obj.width = wdth - 20;
+            //                obj.height = hght - 20;
+            //            }
+            //            if (id == 'textField')
+            //            {
+            //                obj.width = wdth - 60;
+            //                obj.height = hght - 60;
+            //            }
+            //        });
+            //    })
+            //});
+    </script>
+}
+<input type="button" value="undo" onclick="undo()">
+<input type="button" value="redo" onclick="redo()">
+<h2>Редактор</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id, new { id = "hiddenId" })
+        @Html.HiddenFor(model => model.ITEM_TYPE_ID, new { id = "hiddenItemType" })
+        @Html.HiddenFor(model => model.layout_id, new { id = "hiddenLayout" })
+        @Html.HiddenFor(model => model.text, new { id = "hiddenText" })
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="row">
+                        @Html.Label("Размер")
+                        <div class="col-xs-8">
+                            @Html.DropDownListFor(model => model.layout_id, (SelectList)ViewBag.layout_id, String.Empty, new { id = "ddl1", @class = "col-xs-12" })
+                            @Html.ValidationMessageFor(model => model.layout_id)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#" id="side1" class="btn btn-default btn-primary disabled">Первая сторона</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#" id="side2" class="btn btn-default hidden">Вторая сторона</a>
+                            <a href="#" id="deleteside2" class="control-label col-md-2">Удалить вторую сторону</a>
+                            <a href="#" id="addside2" class="control-label col-md-2 hidden">Добавить вторую сторону</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-default" id="clear">Очистить</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <table>
+                            <tr>
+                                <td>@Html.CheckBox("Защитные поля", true, new { id = "chkBox" })</td>
+                                <td>@Html.Label("Защитные поля")</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="col-xs-2">
+                        @Html.DropDownList("Размер шрифта", new SelectList(
+    new List<SelectListItem>
+    {
+       new SelectListItem { Selected = true, Text = "8", Value = "8"},
+        new SelectListItem { Text = "10", Value = "10"},
+        new SelectListItem { Text = "12", Value = "12"},
+        new SelectListItem { Text = "14", Value = "14"},
+        new SelectListItem { Text = "16", Value = "16"},
+        new SelectListItem { Text = "18", Value = "18"},
+        new SelectListItem { Text = "20", Value = "20"},
+        new SelectListItem { Text = "24", Value = "24"},
+        new SelectListItem { Text = "28", Value = "28"},
+        new SelectListItem { Text = "32", Value = "32"},
+        new SelectListItem { Text = "36", Value = "36"},
+        new SelectListItem { Text = "42", Value = "42"},
+    }, "Value", "Text", 1), "Размер шрифта", new { id = "textddl", @class = "col-xs-12" })
+                    </div>
+                    <div class="col-xs-4">
+                        @Html.DropDownList("Размер шрифта", new SelectList(
+    new List<SelectListItem>
+    {
+        new SelectListItem { Selected = true, Text = "Marck Script", Value = "Marck Script"},
+        new SelectListItem { Selected = true, Text = "Seymour One", Value = "Seymour One"},
+        new SelectListItem { Selected = true, Text = "Open Sans", Value = "Open Sans"},
+        new SelectListItem { Selected = true, Text = "Roboto", Value = "Roboto"},
+        new SelectListItem { Selected = true, Text = "Roboto Condensed", Value = "Roboto Condensed"},
+    }, "Value", "Text", 1), "Шрифт", new { id = "styleddl", @class = "col-xs-12" })
+                    </div>
+                    <div class="col-xs-2">
+                        @*<button type="button" id="textcolor" alt="Цвет текста" class="btn btn-default" data-toggle="popover">A</button>*@
+                        <input type="color" value="#ffffff" id="color" alt="Цвет текста" class="btn-default" data-toggle="popover">
+                    </div>
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2">
+                        <button type="button" id="addText" alt="Стиль текста" class="btn btn-default" data-toggle="popover">Добавить текст</button>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Фигуры
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="addRect"><img src="~/Resources/square.png" width="35px" height="35px" />Квадрат</a></li>
+                                <li><a href="#" id="addCircle"><img src="~/Resources/circle.png" width="35px" height="35px" />Круг</a></li>
+                                <li><a href="#" id="addTriangle"><img src="~/Resources/triangle.png" width="35px" height="35px" />Треугольник</a></li>
+                                <li><a href="#" id="addLine"><img src="~/Resources/line.png" width="35px" height="35px" />Линия</a></li>
+                                <li><a href="#" id="addElipse"><img src="~/Resources/elipse.png" width="35px" height="35px" />Овал</a></li>
+                                <li><a href="#" id="addStar"><img src="~/Resources/star.png" width="35px" height="35px" />Звезда</a></li>
+                                <li><a href="#" id="addPentagon"><img src="~/Resources/pentagon.png" width="35px" height="35px" />Пентагон</a></li>
+                                <li><a href="#" id="addHexagon"><img src="~/Resources/hexagon.png" width="35px" height="35px" />Гексагон</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Фоны
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                @foreach (var i in (List<WebApplication9.Models.elements>)ViewBag.backgrounds)
+                                {
+                                    <li><a href="#" class="addBg" id=@i.path><img src=@Url.Content(i.path) width="200px" height="200px" /></a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Инфографика
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                @foreach (var i in (List<WebApplication9.Models.elements>)ViewBag.info)
+                                {
+                                    <li><a href="#" class="addImg" id=@i.path><img src=@Url.Content(i.path) width="200px" height="200px" /></a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="col-md-10">
+                <input type="hidden" id="cardId" value="@ViewBag.EditLayoutId" />
+                @*<input type="hidden" id="hiddenImage" value="@ViewBag.EditLayout" />*@
+                @Html.HiddenFor(model => model.image, new { id = "hiddenImage" })
+                @Html.HiddenFor(model => model.image_side_2, new { id = "hiddenImage_s2" })
+                <div class="col-xs-5">
+                    <div class="row">
+                        <canvas id="canvas"></canvas>
+                        <canvas id="canvas_s2" class="hidden"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Заказать" id="save" name="action:Submit" />
+                    <input type="submit" value="Сохранить макет" id="saveTo" name="action:Save" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

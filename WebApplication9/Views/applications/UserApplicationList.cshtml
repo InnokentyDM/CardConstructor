@@ -1,0 +1,104 @@
+﻿@model IEnumerable<WebApplication9.Models.application>
+
+@{
+    ViewBag.Title = "UserApplication";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    @Scripts.Render("~/js/Application.js")
+</head>
+<body>
+
+    <ul class="nav navbar-nav">
+        <li>
+            @Html.ActionLink("Макеты", "UserCards", "Home")
+        </li>
+        <li class="active">
+            @Html.ActionLink("Заявки", "UserApplication", "Home")
+        </li>
+        <li>
+            @Html.ActionLink("Избранное", "MyFavorite", "favorites")
+        </li>
+    </ul>
+    <table class="table table-condensed table-hover">
+        <tr>
+            <th>
+                @Html.DisplayName("#")
+            </th>
+            <th>
+                @Html.DisplayName("Макет")
+            </th>
+            <th>
+            </th>
+            <th>
+                @Html.DisplayName("Дата заявки")
+            </th>
+            <th>
+                @Html.DisplayName("Статус производства")
+            </th>
+            <th>
+                @Html.DisplayName("Колличество")
+            </th>
+            <th>
+                @Html.DisplayName("Цена")
+            </th>
+            <th>
+                @Html.DisplayName("Оплачено")
+            </th>
+            <th>@Html.DisplayName("Комиссия")</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                @*<td>
+                        <input type="hidden" id="@("label"+item.cards.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => item.cards.image)" />
+                        <input type="hidden" id="@("label_s2"+item.cards.Id)" class="hiddenId_s2" value="@Html.DisplayFor(modelItem => item.cards.image_side_2)" />
+                        <input type="hidden" id="@("width"+item.Id)" class="hiddenWidth" value="@Html.DisplayFor(modelItem => item.cards.layout.width)" />
+                        <input type="hidden" id="@("height"+item.Id)" class="hiddenHeight" value="@Html.DisplayFor(modelItem => item.cards.layout.height)" />
+                        <canvas id="@Html.DisplayFor(modelItem => item.cards.Id)" class="preview"></canvas>
+                        <canvas id="@("s2" + item.cards.Id)" class="preview_s2"></canvas>
+                        @*<img id="@Html.DisplayFor(modelItem => item.Id)" class="imgpreview" />
+                    </td>*@
+                <td>
+                    <img src="@Url.Content(item.cards.preview)" alt="Image" class="images" />
+                </td>
+                <td>
+                    @if (item.cards.preview_2 != null) { 
+                    <img src="@Url.Content(item.cards.preview_2)" alt="Image" class="images" />
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.insertionDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COUNT.COUNT_VALUE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.summ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.withdrawamount)
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

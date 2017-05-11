@@ -1,0 +1,18 @@
+﻿@model IEnumerable<WebApplication9.Models.cards>
+
+@Scripts.Render("~/js/Application.js")
+@Scripts.Render("~/js/fabric.js-1.6.0-rc.1/dist/fabric.js")
+
+
+<ul class="nav navbar-nav">
+    <li class="active">
+        @Html.ActionLink("Макеты", "UserCards", "Home")
+    </li>
+    <li>
+        @Html.ActionLink("Заявки", "UserApplication", "Home")
+    </li>
+    <li>
+        @Html.ActionLink("Избранное", "MyFavorite", "favorites")
+    </li>
+</ul>
+@{Html.RenderAction("FavoriteCardsList", "favorites");}

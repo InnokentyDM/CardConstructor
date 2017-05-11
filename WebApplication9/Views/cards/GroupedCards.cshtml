@@ -1,0 +1,60 @@
+﻿@model IEnumerable<WebApplication9.Models.cards>
+@{
+    ViewBag.Title = "GroupedCards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/js/Application.js")
+@Scripts.Render("~/bundles/fabricjs")
+
+<h2>GroupedCards</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var group in Model.GroupBy(c => c.CARD_GROUP.NAME))
+{
+    @Html.Encode(group.Key)
+    foreach (var item in group)
+    {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.text)
+        </td>
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.CARD_GROUP.NAME)
+        </td>
+        
+        <td>
+            <input type="hidden" id="@("label"+item.Id)" class="hiddenId" value="@Html.DisplayFor(modelItem => item.image)" />
+        </td>
+
+        <td>
+            <canvas id="@Html.DisplayFor(modelItem => item.Id)" class="preview" width="400px" height="300px"></canvas>
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+
+    </tr>
+    }
+}
+
+</table>

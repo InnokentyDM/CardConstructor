@@ -1,0 +1,52 @@
+﻿@model WebApplication9.Models.CARD_CLAIMS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CARD_CLAIMS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaimType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaimValue)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.published)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.cards.text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cards.text)
+        </dd>*@
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

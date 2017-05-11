@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Manager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Manager</h2>
+
+
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.Label("Макеты", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                <ul>
+                    <li class="b-side-nav-item">@Html.ActionLink("Макеты", "../cards/Index")</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Заявки", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                <ul>                 
+                    <li class="b-side-nav-item">@Html.ActionLink("Все заявки", "../applications/Index")</li>
+                    <li class="b-side-nav-item">@Html.ActionLink("Заявки Менеджер", "../applications/ManagerApplicationList")</li>
+                    <li class="b-side-nav-item">@Html.ActionLink("Заявки Печать", "../applications/PrintApplicationList")</li>
+                    <li class="b-side-nav-item">@Html.ActionLink("Готовые заявки", "../applications/DoneApplicationList")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-offset-12"><p></p></div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.Label("Пользователи", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    <ul>
+                       
+                        <li class="b-side-nav-item">@Html.ActionLink("Роли", "../AspNetRoles/Index")</li>
+                        <li class="b-side-nav-item">@Html.ActionLink("Пользователи", "../AspNetUsers/Index")</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Другое", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    <ul>
+                        <li class="b-side-nav-item">@Html.ActionLink("Тиражи", "../COUNTs/Index")</li>
+                        <li class="b-side-nav-item">@Html.ActionLink("Виды Изделий", "../ITEM_TYPE/Index")</li>
+                        <li class="b-side-nav-item">@Html.ActionLink("Размеры", "../layouts/Index")</li>
+                        <li class="b-side-nav-item">@Html.ActionLink("Параметры", "../CARD_CLAIMS/Index")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-offset-12"><p></p></div>
+
+        <div class="col-md-12">
+    <div class="form-group">
+        @Html.Label("Изображения", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+            <ul>
+                <li class="b-side-nav-item">@Html.ActionLink("Изображения", "../elements/Index")</li>
+                <li class="b-side-nav-item">@Html.ActionLink("Типы изображений", "../ELEMENTS_TYPES/Index")</li>
+            </ul>
+        </div>
+    </div>
+
+            <div class="form-group">
+                @Html.Label("Изображения", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    <ul>
+                        <li class="b-side-nav-item">@Html.ActionLink("Города", "../Towns/Index")</li>
+                    </ul>
+                </div>
+            </div>
+</div>
+
+

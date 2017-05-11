@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a7ca0ebd6820476baa0d312b20c9729c" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.application" Width="1.5" PointX="5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetRoles" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserClaims" Width="1.5" PointX="5.875" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserLogins" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUsers" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CARD_CLAIMS" Width="1.5" PointX="11.875" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.cards" Width="1.5" PointX="11.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.COUNT" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Delivery" Width="1.5" PointX="3.125" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.elements" Width="1.5" PointX="9.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ELEMENTS_TYPES" Width="1.5" PointX="7.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.favorite" Width="1.5" PointX="10.625" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ITEM_TYPE" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.layout" Width="1.5" PointX="15.625" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.materials" Width="1.5" PointX="7.375" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Towns" Width="1.5" PointX="1.375" PointY="16.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__application__count" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__application__material" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__application__user" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__application__vc_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__application_Delivery" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cards_toUser" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.user_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CARD_CLAIMS_tocards" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.card_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cards_toITEM_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cards_ToLayout" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_count_toCard_ITEM_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Delivery__Towns" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__elements__ELEMENTS_TYPES" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__elements__ITEM_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__elements__layout" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_layout_toCard_ITEM_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.IMAGES" Width="1.5" PointX="14" PointY="11.75" />
+        <AssociationConnector Association="Model.FK_cards_toImages" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

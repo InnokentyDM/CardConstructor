@@ -1,0 +1,65 @@
+﻿@model WebApplication9.Models.AspNetUsers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AspNetUsers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discriminator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discriminator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmedEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmedEmail)
+        </dd>
+
+
+        @foreach (var i in (List<WebApplication9.Models.AspNetUserClaims>)ViewBag.USER_CLAIMS)
+        {
+            <dt>@Html.DisplayFor(item => i.ClaimType)</dt>
+            <dd>@Html.DisplayFor(item => i.ClaimValue)</dd>
+        }
+
+        @foreach (var i in ViewBag.USER_ROLES)
+        {
+            <dt>@Html.DisplayName("Roles")</dt>
+            <dd>@i</dd>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

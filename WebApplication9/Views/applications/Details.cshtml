@@ -1,0 +1,155 @@
+﻿@model WebApplication9.Models.application
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/js/details.js")
+@Scripts.Render("~/js/jsPDF-master/dist/jspdf.min.js")
+@Scripts.Render("~/bundles/fabricjs")
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal" id="print">
+        <dt>
+            <h3>@Html.DisplayName("Макет")</h3>
+        </dt>
+        @Html.HiddenFor(model => model.cards.layout.width, new { id = "hiddenWidth" })
+        @Html.HiddenFor(model => model.cards.layout.height, new { id = "hiddenHeight" })
+        
+        @*<input type="hidden" id="hiddencanvas" class="hiddenId" value="@Html.DisplayFor(model => model.cards.image)" />
+        <dd>
+            <canvas id="canvas" class="preview" width="500" height="500"></canvas>
+        </dd>
+        <dt></dt>
+        <input type="hidden" id="hiddencanvas_s2" class="hiddenId" value="@Html.DisplayFor(model => model.cards.image_side_2)" />
+        <dd>
+            <canvas id="canvas_s2" class="hidden" width="500" height="500"></canvas>
+        </dd>*@
+        <td>
+            <img src="@Url.Content(Model.cards.preview)" alt="Image" class="images" />
+        </td>
+        <td>
+            @if (Model.cards.preview_2 != null)
+            {
+                <img src="@Url.Content(Model.cards.preview_2)" alt="Image" class="images" />
+            }
+        </td>
+        <hr />
+        <dt></dt>
+        <dd><button value="Download" id="download">Скачать</button></dd>
+        <hr />
+        <dt></dt>
+        <dd><input type="button" value="Layout" id="layout" class="btn btn-default">Макет</input></dd>
+        <hr />
+        <dt>
+            <h3>@Html.DisplayName("Заявка")</h3>
+        </dt>
+        <dd></dd>
+        <dt id="l-ins-date">
+            @Html.DisplayNameFor(model => model.insertionDate)
+        </dt>
+
+        <dd id="i-ins-date">
+            @Html.DisplayFor(model => model.insertionDate)
+        </dd>
+
+        <dt id="l-fin-date">
+            @Html.DisplayNameFor(model => model.finishDate)
+        </dt>
+
+        <dd id="i-fin-date">
+            @Html.DisplayFor(model => model.finishDate)
+        </dd>
+
+        <dt id="l-status">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd id="i-status">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt id="l-summ">
+            @Html.DisplayNameFor(model => model.summ)
+        </dt>
+
+        <dd id="i-summ">
+            @Html.DisplayFor(model => model.summ)
+        </dd>
+
+        <dt id="l-count">
+            @Html.DisplayNameFor(model => model.COUNT)
+        </dt>
+
+        <dd id="i-count">
+            @Html.DisplayFor(model => model.COUNT.COUNT_VALUE)
+        </dd>
+
+        <dt id="l-desc">
+            @Html.DisplayNameFor(model => model.materials.description)
+        </dt>
+
+        <dd id="i-desc">
+            @Html.DisplayFor(model => model.materials.description)
+        </dd>
+
+        <dt class="print">
+            @Html.DisplayNameFor(model => model.cards.text)
+        </dt>
+
+        <dd class="print">
+            @Html.DisplayFor(model => model.cards.text)
+        </dd>
+        <hr />
+        <dt class="print">
+            <h3>Доставка</h3>
+        </dt>
+
+        <dt class="print">
+            @Html.DisplayNameFor(model => model.Delivery.Towns.Name)
+        </dt>
+
+        <dd class="print">
+            @Html.DisplayFor(model => model.Delivery.Towns.Name)
+        </dd>
+
+        <dt class="print">
+            @Html.DisplayNameFor(model => model.Delivery.Street)
+        </dt>
+
+        <dd class="print">
+            @Html.DisplayFor(model => model.Delivery.Street)
+        </dd>
+
+        <dt class="print">
+            @Html.DisplayNameFor(model => model.Delivery.House)
+        </dt>
+
+        <dd class="print">
+            @Html.DisplayFor(model => model.Delivery.House)
+        </dd>
+
+        <dt class="print">
+            @Html.DisplayNameFor(model => model.Delivery.Apartment)
+        </dt>
+
+        <dd class="print">
+            @Html.DisplayFor(model => model.Delivery.Apartment)
+        </dd>
+
+        <hr />
+        <dt class="print">
+            <h3>Пользователь</h3>
+        </dt>
+        <dd></dd>
+    </dl>
+            @{Html.RenderAction("Details", "AspNetUsers", new { id = Model.AspNetUsers.Id });}
+  
+    
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
